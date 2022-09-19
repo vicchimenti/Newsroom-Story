@@ -189,7 +189,7 @@
          /***
           *      Dictionary of content
           * */
-         let cejscDict = {
+         let majorNewsDict = {
  
              contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
              sectionId: getContentValues('<t4 type="content" name="Section ID" output="normal" modifiers="striptags,htmlentities" />'),
