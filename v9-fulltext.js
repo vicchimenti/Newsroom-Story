@@ -176,37 +176,22 @@
           * 
           * */
           let closeWrapper = '</article>';
-          let articleWrapper = (majorNewsDict.contentId.content && majorNewsDict.headline.content) ?
-            '<article class="newsroomArticleWrapper" id="id' + majorNewsDict.contentId.content + '" aria-label="' + majorNewsDict.headline.content + '">' :
-            (majorNewsDict.contentId.content && !majorNewsDict.headline.content) ?
-            '<article class="newsroomArticleWrapper" id="id' + majorNewsDict.contentId.content + '" aria-label="' + majorNewsDict.contentName.content + '">' :
-            '<article class="newsroomArticleWrapper">';
-
-
-
-
-        /***
-          *  meta anchor
-          * 
-          * */
-          let metaAnchor = (majorNewsDict.anchor.content) ?
-            '<article class="newsroomArticleWrapper" id="id' + majorNewsDict.contentId.content + '" aria-label="' + majorNewsDict.headline.content + '">' :
-            (majorNewsDict.contentId.content && !majorNewsDict.headline.content) ?
-            '<article class="newsroomArticleWrapper" id="id' + majorNewsDict.contentId.content + '" aria-label="' + majorNewsDict.contentName.content + '">' :
+          let articleWrapper = (fulltextNewsDict.contentId.content && fulltextNewsDict.headline.content) ?
+            '<article class="newsroomArticleWrapper" id="id' + fulltextNewsDict.contentId.content + '" aria-label="' + fulltextNewsDict.headline.content + '">' :
+            (fulltextNewsDict.contentId.content && !fulltextNewsDict.headline.content) ?
+            '<article class="newsroomArticleWrapper" id="id' + fulltextNewsDict.contentId.content + '" aria-label="' + fulltextNewsDict.contentName.content + '">' :
             '<article class="newsroomArticleWrapper">';
 
 
 
 
          /***
-          *  title link
+          *  page title
           * 
           * */
-          let titleWrapper = (majorNewsDict.fullTextLink.content && majorNewsDict.headline.content) ?
-            '<h2 class="newsroomArticleTitle"><a href="' + majorNewsDict.fullTextLink.content + '" aria-label="Read the full article: ' + majorNewsDict.headline.content + '">' + majorNewsDict.headline.content + '</a></h2>' :
-            (majorNewsDict.fullTextLink.content && !majorNewsDict.headline.content) ?
-            '<h2 class="newsroomArticleTitle"><a href="' + majorNewsDict.fullTextLink.content + '" aria-label="Read the full article: ' + majorNewsDict.contentName.content + '">' + majorNewsDict.contentName.content + '</a></h2>' :
-            '<h2 class="newsroomArticleTitle">' + majorNewsDict.contentName.content + '</h2>';
+          let titleWrapper = (fulltextNewsDict.headline.content) ?
+            '<h1 id="pageTitle">' + '</h1>' :
+            '<h1 id="pageTitle">' + fulltextNewsDict.contentName.content + '</h1>';
 
 
 
@@ -215,10 +200,10 @@
           *  article summary
           * 
           * */
-          let summaryString = (majorNewsDict.articleSubhead.content) ?
-            '<p class="newsroomArticleLead">' + majorNewsDict.articleSubhead.content + '</p>' :
-            (majorNewsDict.articleSetup.content) ?
-            '<p class="newsroomArticleLead">' + majorNewsDict.articleSetup.content + '</p>' :
+          let summaryString = (fulltextNewsDict.articleSubhead.content) ?
+            '<p class="newsroomArticleLead">' + fulltextNewsDict.articleSubhead.content + '</p>' :
+            (fulltextNewsDict.articleSetup.content) ?
+            '<p class="newsroomArticleLead">' + fulltextNewsDict.articleSetup.content + '</p>' :
             '<span class="newsroomArticleLead d-none hidden visually-hidden">No Article Setup Provided</span>';
 
 
@@ -228,8 +213,8 @@
           *  publish date
           * 
           * */
-          let dateString = (majorNewsDict.publishDate.content) ?
-            '<p class="newsroomArticlePublishedDate">' + majorNewsDict.publishDate.content + '</p>' :
+          let dateString = (fulltextNewsDict.publishDate.content) ?
+            '<p class="newsroomArticlePublishedDate">' + fulltextNewsDict.publishDate.content + '</p>' :
             '<span class="newsroomArticlePublishedDate d-none hidden visually-hidden">No Publish Date Provided</span>';
 
 
@@ -239,9 +224,9 @@
           *  prioritize media library image
           * 
           * */
-         let imageString = (majorNewsDict.mediaImage.content) ?
-            mediaTag(majorNewsDict.mediaImage.content) :
-            externalImageTag(majorNewsDict.externalImage.content, majorNewsDict.externalImageAlt.content, majorNewsDict.contentName.content);
+         let imageString = (fulltextNewsDict.mediaImage.content) ?
+            mediaTag(fulltextNewsDict.mediaImage.content) :
+            externalImageTag(fulltextNewsDict.externalImage.content, fulltextNewsDict.externalImageAlt.content, fulltextNewsDict.contentName.content);
 
 
 
@@ -253,7 +238,7 @@
          writeDocument(
              [
                 articleWrapper,
-                majorNewsDict.anchor.content,
+                fulltextNewsDict.anchor.content,
                 imageString,
                 titleWrapper,
                 summaryString,
