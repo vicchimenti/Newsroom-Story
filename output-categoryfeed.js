@@ -217,6 +217,20 @@
             '<article class="newsroomArticleWrapper newsroomBlurb contentItem" id="id' + majorNewsDict.contentId.content + 'category" aria-label="' + majorNewsDict.contentName.content + '">' :
             '<article class="newsroomArticleWrapper newsroomBlurb contentItem">';
 
+
+
+
+         /***
+          *  title link
+          * 
+          * */
+          let closeTitle = '</h2>';
+          let titleWrapper = (majorNewsDict.fullTextLink.content && majorNewsDict.headline.content) ?
+            '<h2 class="newsroomArticleTitle"><a href="' + majorNewsDict.fullTextLink.content + '" aria-label="' + majorNewsDict.headline.content + '"></a>' :
+            (majorNewsDict.contentId.content && !majorNewsDict.headline.content) ?
+            '<article class="newsroomArticleWrapper newsroomBlurb contentItem" id="id' + majorNewsDict.contentId.content + 'category" aria-label="' + majorNewsDict.contentName.content + '">' :
+            '<article class="newsroomArticleWrapper newsroomBlurb contentItem">';
+
  
  
  
