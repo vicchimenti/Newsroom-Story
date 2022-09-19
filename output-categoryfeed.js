@@ -107,7 +107,6 @@
      function mediaTag(mediaPath) {
  
          let itemId = content.get('Media Library Image').getID();
-        //  let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
          let mediaInfo = getMediaInfo(itemId);
          let media = readMedia(itemId);
          let info = new ImageInfo();
