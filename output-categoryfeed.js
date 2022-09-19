@@ -294,20 +294,8 @@
                 titleWrapper,
                 summaryString,
                 dateString,
-
-
-                 beginningHTML,
-                 openCardHeader,
-                 titleLink,
-                 subtitleString,
-                 closeCardHeader,
-                 openBodyWrapper,
-                 listOfLsapIcons,
-                 listOfIcons,
-                 sectionIdString,
-                 closeBodyWrapper,
-
-                 closeWrapper
+                closeWrapper
+                
              ]
          );
  
