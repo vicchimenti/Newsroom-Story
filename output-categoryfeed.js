@@ -195,6 +195,7 @@
              articleSetup: getContentValues('<t4 type="content" name="Article Setup" output="normal" modifiers="medialibrary,nav_sections" />'),
              mediaImage: getContentValues('<t4 type="content" name="Media Library Image" output="normal" formatter="path/*" />'),
              externalImage: getContentValues('<t4 type="content" name="Image" output="imageurl" />'),
+             externalImageAlt: getContentValues('<t4 type="content" name="Alt text" output="normal" modifiers="striptags,htmlentities" />'),
 
 
              sectionId: getContentValues('<t4 type="content" name="Section ID" output="normal" modifiers="striptags,htmlentities" />'),
