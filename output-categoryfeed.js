@@ -127,7 +127,7 @@
      *      Returns a formatted html img tag
      *      for an external image
      */
-        function mediaTag(imagePath, imageAlt) {
+        function externalImageTag(imagePath, imageAlt) {
 
         let imageHTML = (imagePath && imageAlt) ?
             '<span class="newsroomImageWrapper"><img src="' + mediaPath + '" class="d-inline" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></span>' :
@@ -137,7 +137,7 @@
     }
  
  
-     externalImageTag
+     
  
      /***
       *      Returns a formatted html img tag
