@@ -126,6 +126,8 @@
      */
     function assignList(arrayOfValues) {
 
+        // <p class="newsroomArticleTopicsHeader">Campus Community / People of SU</p>
+
         let listValues = '';
 
         for (let i = 0; i < arrayOfValues.length; i++) {
@@ -260,10 +262,12 @@
          *  process categories
          * 
          * */
-        if (majorDict.catTags.content) {
+        if (fulltextNewsDict.topics.content) {
 
-            let arrayOfCats = majorDict.catTags.content.split(',');
-            let listItems = assignList(arrayOfCats);
+            let arrayOfTops = fulltextNewsDict.topics.content.split(',');
+            let listItems = assignList(arrayOfTops);
+
+            // <p class="newsroomArticleTopicsHeader">Campus Community / People of SU</p>
 
             // Print any tags that were selected
             listOfCats = '<div class="newsroomArticle tags topics visually-hidden hidden"><ul class="categories">' + listItems + '</ul></div><br>';
