@@ -230,6 +230,18 @@
             '<h2 class="newsroomArticleTitle"><a href="' + majorNewsDict.fullTextLink.content + '" aria-label="Read the full article: ' + majorNewsDict.contentName.content + '">' + majorNewsDict.contentName.content + '</a></h2>' :
             '<h2 class="newsroomArticleTitle">' + majorNewsDict.contentName.content + '</h2>';
 
+
+
+
+         /***
+          *  article summary
+          * 
+          * */
+          let summaryString = (majorNewsDict.articleSetup.content) ?
+            '<p class="newsroomArticleLead">' + majorNewsDict.articleSetup.content + '</p>' :
+            '<span class="newsroomArticleLead d-none hidden visually-hidden">No Article Setup Provided</span>';
+
+
  
  
  
