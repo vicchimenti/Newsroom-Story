@@ -148,7 +148,7 @@
          /***
           *      Dictionary of content
           * */
-         let majorNewsDict = {
+         let fulltextNewsDict = {
  
              contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
              headline: getContentValues('<t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" />'),
