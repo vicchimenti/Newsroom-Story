@@ -242,6 +242,17 @@
             '<span class="newsroomArticleLead d-none hidden visually-hidden">No Article Setup Provided</span>';
 
 
+
+
+         /***
+          *  publish date
+          * 
+          * */
+          let dateString = (majorNewsDict.publishDate.content) ?
+            '<p class="newsroomArticlePublishedDate">' + majorNewsDict.publishDate.content + '</p>' :
+            '<span class="newsroomArticlePublishedDate d-none hidden visually-hidden">No Publish Date Provided</span>';
+
+
  
  
  
