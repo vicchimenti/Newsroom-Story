@@ -185,6 +185,19 @@
 
 
 
+        /***
+          *  meta anchor
+          * 
+          * */
+          let metaAnchor = (majorNewsDict.anchor.content) ?
+            '<article class="newsroomArticleWrapper" id="id' + majorNewsDict.contentId.content + '" aria-label="' + majorNewsDict.headline.content + '">' :
+            (majorNewsDict.contentId.content && !majorNewsDict.headline.content) ?
+            '<article class="newsroomArticleWrapper" id="id' + majorNewsDict.contentId.content + '" aria-label="' + majorNewsDict.contentName.content + '">' :
+            '<article class="newsroomArticleWrapper">';
+
+
+
+
          /***
           *  title link
           * 
@@ -240,6 +253,7 @@
          writeDocument(
              [
                 articleWrapper,
+                majorNewsDict.anchor.content,
                 imageString,
                 titleWrapper,
                 summaryString,
