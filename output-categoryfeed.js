@@ -192,6 +192,7 @@
          let majorNewsDict = {
  
              contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+             headline: getContentValues('<t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" />'),
              articleSetup: getContentValues('<t4 type="content" name="Article Setup" output="normal" modifiers="medialibrary,nav_sections" />'),
              mediaImage: getContentValues('<t4 type="content" name="Media Library Image" output="normal" formatter="path/*" />'),
              externalImage: getContentValues('<t4 type="content" name="Image" output="imageurl" />'),
