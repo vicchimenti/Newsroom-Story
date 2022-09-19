@@ -207,15 +207,15 @@
 
          
          /***
-          *  default html initializations
+          *  article wrapper
           * 
           * */
-         let articleWrapper = (majorNewsDict.contentId.content && majorNewsDict.headline.content) ?
+          let closeWrapper = '</article>';
+          let articleWrapper = (majorNewsDict.contentId.content && majorNewsDict.headline.content) ?
             '<article class="newsroomArticleWrapper newsroomBlurb contentItem" id="id' + majorNewsDict.contentId.content + 'category" aria-label="' + majorNewsDict.headline.content + '">' :
             (majorNewsDict.contentId.content && !majorNewsDict.headline.content) ?
             '<article class="newsroomArticleWrapper newsroomBlurb contentItem" id="id' + majorNewsDict.contentId.content + 'category" aria-label="' + majorNewsDict.contentName.content + '">' :
             '<article class="newsroomArticleWrapper newsroomBlurb contentItem">';
-         let closeWrapper = '</article>';
 
  
  
