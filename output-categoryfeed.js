@@ -126,17 +126,17 @@
      /***
       *      Returns a formatted html img tag
       */
-     function getTarget(itemId) {
+    //  function getTarget(itemId) {
  
-         let mediaInfo = getMediaInfo(itemId);
-         let media = readMedia(itemId);
-         let info = new ImageInfo();
-         info.setInput(media);
+    //      let mediaInfo = getMediaInfo(itemId);
+    //      let media = readMedia(itemId);
+    //      let info = new ImageInfo();
+    //      info.setInput(media);
  
-         let target = (info.check()) ? '' + mediaInfo.getName() + '' : null;
+    //      let target = (info.check()) ? '' + mediaInfo.getName() + '' : null;
  
-         return target;
-     }
+    //      return target;
+    //  }
  
  
  
@@ -259,13 +259,14 @@
           *  prioritize media library image
           * 
           * */
-         let imageString = (expertsDict.primaryImage.content) ?
+         let imageString = (majorNewsDict.mediaImage.content) ?
+
             '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage card-img-top p-0 m-0" alt="' + expertsDict.contentName.content + '" loading="auto" /></span>' :
             '<span class="expertsImage hidden visually-hidden">No Image Provided</span>';
          
-         if (expertsDict.primaryImage.content) {
+         if (majorNewsDict.mediaImage.content) {
 
-            let imageID = content.get('Photo').getID();
+            let imageID = content.get('Media Library Image').getID();
             let mediaInfo = getMediaInfo(imageID);
             let media = readMedia(imageID);
             let info = new ImageInfo;
