@@ -114,8 +114,8 @@
          info.setInput(media);
  
          let mediaHTML = (info.check()) ?
-             '<span class="newsroomImageWrapper"><img src="' + mediaPath + '" class="lazy" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></span>' :
-             '<span class="newsroomImageWrapper d-none visually-hidden hidden">Invalid Image ID</span>';
+             '<span class="newsroomImageWrapper"><img src="' + mediaPath + '" class="d-inline" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></span>' :
+             '<span class="newsroomImageWrapper d-none visually-hidden hidden">Invalid Media ID</span>';
  
          return mediaHTML;
      }
