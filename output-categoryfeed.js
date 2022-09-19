@@ -152,6 +152,7 @@
              contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
              headline: getContentValues('<t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" />'),
              articleSetup: getContentValues('<t4 type="content" name="Article Setup" output="normal" modifiers="striptags,htmlentities" />'),
+             articleSubhead: getContentValues('<t4 type="content" name="Article Subhead" output="normal" modifiers="striptags,htmlentities" />'),
              mediaImage: getContentValues('<t4 type="content" name="Media Library Image" output="normal" formatter="path/*" />'),
              externalImage: getContentValues('<t4 type="content" name="Image" output="imageurl" />'),
              externalImageAlt: getContentValues('<t4 type="content" name="Alt text" output="normal" modifiers="striptags,htmlentities" />'),
@@ -195,7 +196,9 @@
           *  article summary
           * 
           * */
-          let summaryString = (majorNewsDict.articleSetup.content) ?
+          let summaryString = (majorNewsDict.articleSubhead.content) ?
+            '<p class="newsroomArticleLead">' + majorNewsDict.articleSubhead.content + '</p>' :
+            (majorNewsDict.articleSetup.content) ?
             '<p class="newsroomArticleLead">' + majorNewsDict.articleSetup.content + '</p>' :
             '<span class="newsroomArticleLead d-none hidden visually-hidden">No Article Setup Provided</span>';
 
