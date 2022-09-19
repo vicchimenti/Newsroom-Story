@@ -55,17 +55,17 @@
      /***
       *      Returns an array of sdg items
       */
-     function assignSdgList(arrayOfValues) {
+    //  function assignSdgList(arrayOfValues) {
  
-         let listValues = '';
+    //      let listValues = '';
  
-         for (let i = 0; i < arrayOfValues.length; i++) {
+    //      for (let i = 0; i < arrayOfValues.length; i++) {
  
-             listValues += '<li class="list-group-item sdgIcon">' + arrayOfValues[i].trim() + '</li>';
-         }
+    //          listValues += '<li class="list-group-item sdgIcon">' + arrayOfValues[i].trim() + '</li>';
+    //      }
  
-         return listValues;
-     }
+    //      return listValues;
+    //  }
  
 
 
