@@ -224,12 +224,11 @@
           *  title link
           * 
           * */
-          let closeTitle = '</h2>';
           let titleWrapper = (majorNewsDict.fullTextLink.content && majorNewsDict.headline.content) ?
-            '<h2 class="newsroomArticleTitle"><a href="' + majorNewsDict.fullTextLink.content + '" aria-label="Read the full article: ' + majorNewsDict.headline.content + '"></a>' :
-            (majorNewsDict.contentId.content && !majorNewsDict.headline.content) ?
-            '<article class="newsroomArticleWrapper newsroomBlurb contentItem" id="id' + majorNewsDict.contentId.content + 'category" aria-label="' + majorNewsDict.contentName.content + '">' :
-            '<article class="newsroomArticleWrapper newsroomBlurb contentItem">';
+            '<h2 class="newsroomArticleTitle"><a href="' + majorNewsDict.fullTextLink.content + '" aria-label="Read the full article: ' + majorNewsDict.headline.content + '">' + majorNewsDict.headline.content + '</a></h2>' :
+            (majorNewsDict.fullTextLink.content && !majorNewsDict.headline.content) ?
+            '<h2 class="newsroomArticleTitle"><a href="' + majorNewsDict.fullTextLink.content + '" aria-label="Read the full article: ' + majorNewsDict.contentName.content + '">' + majorNewsDict.contentName.content + '</a></h2>' :
+            '<h2 class="newsroomArticleTitle">' + majorNewsDict.contentName.content + '</h2>';
 
  
  
