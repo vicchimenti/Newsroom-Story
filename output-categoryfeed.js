@@ -127,11 +127,14 @@
      *      Returns a formatted html img tag
      *      for an external image
      */
-        function externalImageTag(imagePath, imageAlt) {
+        function externalImageTag(imagePath, imageAlt, imageTitle) {
 
         let imageHTML = (imagePath && imageAlt) ?
-            '<span class="newsroomImageWrapper"><img src="' + mediaPath + '" class="d-inline" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></span>' :
-            '<span class="newsroomImageWrapper d-none visually-hidden hidden">Invalid Media ID</span>';
+            '<span class="newsroomImageWrapper"><img src="' + mediaPath + '" class="d-inline" aria-label="' + imageTitle + '" alt="' + imageAlt + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></span>' :
+            (imagePath && !imageAlt) ?
+            '<span class="newsroomImageWrapper"><img src="' + mediaPath + '" class="d-inline" aria-label="' + imageTitle + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></span>' :
+
+            '<span class="newsroomImageWrapper d-none visually-hidden hidden">Invalid Image</span>';
 
         return imageHTML;
     }
