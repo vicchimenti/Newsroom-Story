@@ -230,6 +230,17 @@
 
 
 
+
+        /***
+          *  topics list
+          * 
+          * */
+        //   let topicsWrapper = (fulltextNewsDict.topics.content) ?
+        //     '<h1 id="pageTitle">' + fulltextNewsDict.headline.content + '</h1>' :
+        //     '<h1 id="pageTitle">' + fulltextNewsDict.contentName.content + '</h1>';
+
+
+
    
          /***
           *  write document once
