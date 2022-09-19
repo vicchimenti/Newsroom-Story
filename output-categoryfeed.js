@@ -222,52 +222,7 @@
             externalImageTag(majorNewsDict.externalImage.content, majorNewsDict.externalImageAlt.content, majorNewsDict.contentName.content);
 
 
-            // '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage card-img-top p-0 m-0" alt="' + expertsDict.contentName.content + '" loading="auto" /></span>' :
-            // '<span class="expertsImage hidden visually-hidden">No Image Provided</span>';
-         
-        //  if (majorNewsDict.mediaImage.content) {
 
-        //     let imageID = content.get('Media Library Image').getID();
-        //     let mediaInfo = getMediaInfo(imageID);
-        //     let media = readMedia(imageID);
-        //     let info = new ImageInfo;
-        //     info.setInput(media);
-
-        //     imageString = (info.check()) ?
-        //         '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage card-img-top p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></span>' :
-        //         '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage noMediaId card-img-top p-0 m-0" loading="auto" /></span>';
-        //  }
-
-
- 
- 
- 
- 
-         /***
-          *  Parse and format sdg icons
-          * 
-          * */
-        //  if (cejscDict.icons.content) {
- 
-        //      let iconArray = cejscDict.icons.content.split(',');
-        //      let iconPathArray = [];
-
-        //      iconArray.sort();
- 
-        //      for (let icon in iconArray) {
- 
-        //          iconPathArray[icon] = mediaTag(iconArray[icon].trim());
-        //      }
- 
-        //      let iconValues = assignSdgList(iconPathArray);
-        //      listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
-        //  }
-
-
-
-
-
- 
    
          /***
           *  write document once
