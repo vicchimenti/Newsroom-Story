@@ -256,7 +256,18 @@
         //   let topicsWrapper = (fulltextNewsDict.topics.content) ?
         //     '<h1 id="pageTitle">' + fulltextNewsDict.headline.content + '</h1>' :
         //     '<h1 id="pageTitle">' + fulltextNewsDict.contentName.content + '</h1>';
+        /***
+         *  process categories
+         * 
+         * */
+        if (majorDict.catTags.content) {
 
+            let arrayOfCats = majorDict.catTags.content.split(',');
+            let listItems = assignList(arrayOfCats);
+
+            // Print any tags that were selected
+            listOfCats = '<div class="newsroomArticle tags topics visually-hidden hidden"><ul class="categories">' + listItems + '</ul></div><br>';
+        }
 
 
    
