@@ -177,10 +177,10 @@
           * */
           let closeWrapper = '</article>';
           let articleWrapper = (majorNewsDict.contentId.content && majorNewsDict.headline.content) ?
-            '<article class="newsroomArticleWrapper newsroomBlurb contentItem" id="id' + majorNewsDict.contentId.content + 'category" aria-label="' + majorNewsDict.headline.content + '">' :
+            '<article class="newsroomArticleWrapper" id="id' + majorNewsDict.contentId.content + '" aria-label="' + majorNewsDict.headline.content + '">' :
             (majorNewsDict.contentId.content && !majorNewsDict.headline.content) ?
-            '<article class="newsroomArticleWrapper newsroomBlurb contentItem" id="id' + majorNewsDict.contentId.content + 'category" aria-label="' + majorNewsDict.contentName.content + '">' :
-            '<article class="newsroomArticleWrapper newsroomBlurb contentItem">';
+            '<article class="newsroomArticleWrapper" id="id' + majorNewsDict.contentId.content + '" aria-label="' + majorNewsDict.contentName.content + '">' :
+            '<article class="newsroomArticleWrapper">';
 
 
 
