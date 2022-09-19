@@ -192,6 +192,7 @@
          let majorNewsDict = {
  
              contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+             articleSetup: getContentValues('<t4 type="content" name="Article Setup" output="normal" modifiers="medialibrary,nav_sections" />'),
 
 
              sectionId: getContentValues('<t4 type="content" name="Section ID" output="normal" modifiers="striptags,htmlentities" />'),
