@@ -102,7 +102,8 @@
  
  
      /***
-      *      Returns a formatted html img tag
+      *     Returns a formatted html img tag
+      *     for a media library image
       */
      function mediaTag(mediaPath) {
  
@@ -118,9 +119,25 @@
  
          return mediaHTML;
      }
+
+
+
+
+    /***
+     *      Returns a formatted html img tag
+     *      for an external image
+     */
+        function mediaTag(imagePath, imageAlt) {
+
+        let imageHTML = (imagePath && imageAlt) ?
+            '<span class="newsroomImageWrapper"><img src="' + mediaPath + '" class="d-inline" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></span>' :
+            '<span class="newsroomImageWrapper d-none visually-hidden hidden">Invalid Media ID</span>';
+
+        return imageHTML;
+    }
  
  
- 
+     externalImageTag
  
      /***
       *      Returns a formatted html img tag
@@ -259,6 +276,9 @@
           * 
           * */
          let imageString = (majorNewsDict.mediaImage.content) ?
+            mediaTag(majorNewsDict.mediaImage.content) :
+            externalImageTag(majorNewsDict.externalImage.content, majorNewsDict.externalImageAlt.content);
+
 
             '<span class="cardImageWrapper"><img src="' + expertsDict.primaryImage.content + '" class="expertsImage card-img-top p-0 m-0" alt="' + expertsDict.contentName.content + '" loading="auto" /></span>' :
             '<span class="expertsImage hidden visually-hidden">No Image Provided</span>';
