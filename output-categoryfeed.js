@@ -144,20 +144,20 @@
      /***
       *      Returns an array of list items
       */
-     function formatTargets(arrayOfValues) {
+    //  function formatTargets(arrayOfValues) {
  
-         let listValues = '';
+    //      let listValues = '';
  
-         for (let i = 0; i < arrayOfValues.length; i++) {
+    //      for (let i = 0; i < arrayOfValues.length; i++) {
  
-             if (arrayOfValues[i]) {
-                 let cleanValue = arrayOfValues[i].replace(/\s/g, '-');
-                 listValues += '' + cleanValue.trim() + ' ';
-             }
-         }
+    //          if (arrayOfValues[i]) {
+    //              let cleanValue = arrayOfValues[i].replace(/\s/g, '-');
+    //              listValues += '' + cleanValue.trim() + ' ';
+    //          }
+    //      }
  
-         return listValues;
-     }
+    //      return listValues;
+    //  }
 
  
  
@@ -295,7 +295,7 @@
                 summaryString,
                 dateString,
                 closeWrapper
-                
+
              ]
          );
  
