@@ -49,30 +49,9 @@
          }
      }
  
- 
- 
- 
-     /***
-      *      Returns an array of sdg items
-      */
-    //  function assignSdgList(arrayOfValues) {
- 
-    //      let listValues = '';
- 
-    //      for (let i = 0; i < arrayOfValues.length; i++) {
- 
-    //          listValues += '<li class="list-group-item sdgIcon">' + arrayOfValues[i].trim() + '</li>';
-    //      }
- 
-    //      return listValues;
-    //  }
- 
-
 
  
  
- 
-
      /***
       *      Returns a media object
       */
@@ -139,43 +118,10 @@
     }
  
  
-     
- 
-     /***
-      *      Returns a formatted html img tag
-      */
-    //  function getTarget(itemId) {
- 
-    //      let mediaInfo = getMediaInfo(itemId);
-    //      let media = readMedia(itemId);
-    //      let info = new ImageInfo();
-    //      info.setInput(media);
- 
-    //      let target = (info.check()) ? '' + mediaInfo.getName() + '' : null;
- 
-    //      return target;
-    //  }
+
  
  
- 
- 
-     /***
-      *      Returns an array of list items
-      */
-    //  function formatTargets(arrayOfValues) {
- 
-    //      let listValues = '';
- 
-    //      for (let i = 0; i < arrayOfValues.length; i++) {
- 
-    //          if (arrayOfValues[i]) {
-    //              let cleanValue = arrayOfValues[i].replace(/\s/g, '-');
-    //              listValues += '' + cleanValue.trim() + ' ';
-    //          }
-    //      }
- 
-    //      return listValues;
-    //  }
+
 
  
  
