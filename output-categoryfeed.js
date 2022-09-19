@@ -341,7 +341,6 @@
                 summaryString,
                 dateString,
                 closeWrapper
-
              ]
          );
  
