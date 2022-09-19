@@ -158,6 +158,7 @@
              externalImage: getContentValues('<t4 type="content" name="Image" output="imageurl" />'),
              externalImageAlt: getContentValues('<t4 type="content" name="Alt text" output="normal" modifiers="striptags,htmlentities" />'),
              imageCredit: getContentValues('<t4 type="content" name="Image Credit" output="normal" modifiers="striptags,htmlentities" />'),
+             caption: getContentValues('<t4 type="content" name="Image Caption" output="normal" modifiers="striptags,htmlentities" />'),
              publishDate: getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
              author: getContentValues('<t4 type="content" name="Author" output="normal" modifiers="striptags,htmlentities" />'),
              topics: getContentValues('<t4 type="content" name="Topics" output="normal" display_field="name" modifiers="htmlentities" />'),
