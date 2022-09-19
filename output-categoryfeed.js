@@ -281,6 +281,8 @@
                 articleWrapper,
 
                 titleWrapper,
+                summaryString,
+
 
                  beginningHTML,
                  openCardHeader,
@@ -288,7 +290,6 @@
                  subtitleString,
                  closeCardHeader,
                  openBodyWrapper,
-                 summaryString,
                  listOfLsapIcons,
                  listOfIcons,
                  sectionIdString,
