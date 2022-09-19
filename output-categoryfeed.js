@@ -119,13 +119,7 @@
  
  
 
- 
- 
-
-
- 
- 
- 
+  
      /***
       *      Write the document
       */
