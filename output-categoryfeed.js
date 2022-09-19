@@ -130,10 +130,9 @@
         function externalImageTag(imagePath, imageAlt, imageTitle) {
 
         let imageHTML = (imagePath && imageAlt) ?
-            '<span class="newsroomImageWrapper"><img src="' + mediaPath + '" class="d-inline" aria-label="' + imageTitle + '" alt="' + imageAlt + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></span>' :
+            '<span class="newsroomImageWrapper"><img src="' + imagePath + '" class="d-inline" aria-label="' + imageTitle + '" alt="' + imageAlt + '" loading="auto" /></span>' :
             (imagePath && !imageAlt) ?
-            '<span class="newsroomImageWrapper"><img src="' + mediaPath + '" class="d-inline" aria-label="' + imageTitle + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></span>' :
-
+            '<span class="newsroomImageWrapper"><img src="' + imagePath + '" class="d-inline" aria-label="' + imageTitle + '" alt="' + imageTitle + '" loading="auto" /></span>' :
             '<span class="newsroomImageWrapper d-none visually-hidden hidden">Invalid Image</span>';
 
         return imageHTML;
