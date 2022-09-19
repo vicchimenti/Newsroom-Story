@@ -268,6 +268,8 @@
              [
                 articleWrapper,
 
+                titleWrapper,
+
                  beginningHTML,
                  openCardHeader,
                  titleLink,
