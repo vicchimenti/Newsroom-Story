@@ -107,7 +107,7 @@
      *      Returns a formatted html img tag
      *      for an external image
      */
-        function externalImageTag(imagePath, imageAlt, imageTitle) {
+    function externalImageTag(imagePath, imageAlt, imageTitle) {
 
         let imageHTML = (imagePath && imageAlt) ?
             '<span class="newsroomImageWrapper"><img src="' + imagePath + '" class="d-inline" aria-label="' + imageTitle + '" alt="' + imageAlt + '" loading="auto" /></span>' :
@@ -116,6 +116,24 @@
             '<span class="newsroomImageWrapper d-none visually-hidden hidden">Invalid Image</span>';
 
         return imageHTML;
+    }
+
+
+
+
+    /***
+     *      Returns an array of list items
+     */
+    function assignList(arrayOfValues) {
+
+        let listValues = '';
+
+        for (let i = 0; i < arrayOfValues.length; i++) {
+
+            listValues += '<li class="tag">' + arrayOfValues[i].trim() + '</li>';
+        }
+
+        return listValues;
     }
  
  
