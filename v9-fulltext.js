@@ -1,15 +1,16 @@
     /***
      *     @author  Victor Chimenti, MSCS
-     *     @file    output-categoryfeed.js
-     *                  output/categoryfeed
+     *     @file    v9-fulltext.js
+     *                  v9/fulltext
+     *                  Newsroom: Story
      *                  id:5150
      *
-     *     This content type will work in conjunction with the
-     *     Newsroom Topic Selector.
+     *     This item will be a shareable fullpage URL
+     *     containing the full body of a newsroom story
      *
      *     Document will write once when the page loads
      *
-     *     @version 4.2.3
+     *     @version 5.0
      */
 
 
