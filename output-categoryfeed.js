@@ -307,21 +307,21 @@
           *  Parse and format sdg icons
           * 
           * */
-         if (cejscDict.icons.content) {
+        //  if (cejscDict.icons.content) {
  
-             let iconArray = cejscDict.icons.content.split(',');
-             let iconPathArray = [];
+        //      let iconArray = cejscDict.icons.content.split(',');
+        //      let iconPathArray = [];
 
-             iconArray.sort();
+        //      iconArray.sort();
  
-             for (let icon in iconArray) {
+        //      for (let icon in iconArray) {
  
-                 iconPathArray[icon] = mediaTag(iconArray[icon].trim());
-             }
+        //          iconPathArray[icon] = mediaTag(iconArray[icon].trim());
+        //      }
  
-             let iconValues = assignSdgList(iconPathArray);
-             listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
-         }
+        //      let iconValues = assignSdgList(iconPathArray);
+        //      listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+        //  }
 
 
 
