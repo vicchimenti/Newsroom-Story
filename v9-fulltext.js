@@ -158,7 +158,7 @@
              externalImage: getContentValues('<t4 type="content" name="Image" output="imageurl" />'),
              externalImageAlt: getContentValues('<t4 type="content" name="Alt text" output="normal" modifiers="striptags,htmlentities" />'),
              publishDate: getContentValues('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />'),
-             topics: getContentValues('<t4 type="content" name="Topics" output="normal" display_field="value" modifiers="htmlentities" />'),
+             topics: getContentValues('<t4 type="content" name="Topics" output="normal" display_field="name" modifiers="htmlentities" />'),
              fullStory: getContentValues('<t4 type="content" name="Story article" output="normal" modifiers="medialibrary,nav_sections" />'),
              anchor: getContentValues('<t4 type="meta" meta="html_anchor" />'),
              contentId: getContentValues('<t4 type="meta" meta="content_id" />')
