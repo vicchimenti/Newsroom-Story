@@ -293,6 +293,7 @@
 
                 titleWrapper,
                 summaryString,
+                dateString,
 
 
                  beginningHTML,
