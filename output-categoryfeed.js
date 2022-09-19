@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 4.0
+     *     @version 4.1
      */
 
 
@@ -103,7 +103,7 @@
  
      /***
       *     Returns a formatted html img tag
-      *     for a media library image
+      *     for a media library image element
       */
      function mediaTag(mediaPath) {
  
