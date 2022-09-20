@@ -241,6 +241,17 @@
 
 
 
+        /***
+          *  by line
+          * 
+          * */
+          let byLine = (fulltextNewsDict.author.content) ?
+            '<div class="newsroomArticleAuthor"><p>Written by ' + fulltextNewsDict.author.content + '</p></div>' :
+            '<span class="newsroomArticleAuthor d-none hidden visually-hidden">No Author Provided</span>';
+
+
+
+
          /***
           *  article summary
           * 
@@ -305,7 +316,7 @@
 
                 imageString,
 
-                
+
                 summaryString,
 
                 closeWrapper
