@@ -296,10 +296,18 @@
              [
                 articleWrapper,
                 fulltextNewsDict.anchor.content,
-                imageString,
+
+                formattedTopics,
                 titleWrapper,
-                summaryString,
+
                 dateString,
+
+
+                imageString,
+
+                
+                summaryString,
+
                 closeWrapper
              ]
          );
