@@ -225,6 +225,8 @@
           * */
          let openImageWrapper = '<div class="newsroomFeaturedImageWrapper">';
          let closeImageWrapper = '</div>';
+         let openRow = '<div class="row">';
+         let closeRow = '</div>';
 
          
  
@@ -285,6 +287,17 @@
          let imageString = (fulltextNewsDict.mediaImage.content) ?
             mediaTag(fulltextNewsDict.mediaImage.content) :
             externalImageTag(fulltextNewsDict.externalImage.content, fulltextNewsDict.externalImageAlt.content, fulltextNewsDict.contentName.content);
+
+
+
+
+         /***
+          *  publish date
+          * 
+          * */
+          let imageCreditString = (fulltextNewsDict.imageCredit.content) ?
+            '<div class="newsroomFeaturedImageCredit col-md-3"><p>Image credit: ' + fulltextNewsDict.imageCredit.content + '</p></div>' :
+            '<span class="newsroomFeaturedImageCredit d-none hidden visually-hidden">No Image Credit Provided</span>';
 
 
 
