@@ -277,31 +277,14 @@
 
 
         /***
-          *  topics list
-          * 
-          * */
-        //   let topicsWrapper = (fulltextNewsDict.topics.content) ?
-        //     '<h1 id="pageTitle">' + fulltextNewsDict.headline.content + '</h1>' :
-        //     '<h1 id="pageTitle">' + fulltextNewsDict.contentName.content + '</h1>';
-        /***
          *  process categories
          * 
          * */
 
-        let listofTopics = (fulltextNewsDict.topics.content) ?
+         let listofTopics = (fulltextNewsDict.topics.content) ?
             processList(fulltextNewsDict.topics.content) :
             '<span class="newsroomArticleTopicsHeader d-none hidden visually-hidden">No Valid Topic Provided</span>';
 
-        // if (fulltextNewsDict.topics.content) {
-
-        //     let arrayOfTops = fulltextNewsDict.topics.content.split(',');
-        //     let listItems = assignList(arrayOfTops);
-
-        //     // <p class="newsroomArticleTopicsHeader">Campus Community / People of SU</p>
-
-        //     // Print any tags that were selected
-        //     listOfCats = '<div class="newsroomArticle tags topics visually-hidden hidden"><ul class="categories">' + listItems + '</ul></div><br>';
-        // }
 
 
    
