@@ -338,11 +338,13 @@
 
                 byLine,
                 dateString,
+                openImageWrapper,
 
 
                 imageString,
 
 
+                closeImageWrapper,
                 summaryString,
 
                 closeWrapper
