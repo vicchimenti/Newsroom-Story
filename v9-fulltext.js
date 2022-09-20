@@ -241,13 +241,29 @@
 
 
 
-        /***
+         /***
           *  by line
           * 
           * */
           let byLine = (fulltextNewsDict.author.content) ?
             '<div class="newsroomArticleAuthor"><p>Written by ' + fulltextNewsDict.author.content + '</p></div>' :
             '<span class="newsroomArticleAuthor d-none hidden visually-hidden">No Author Provided</span>';
+
+
+
+
+         /***
+          *  publish date
+          * 
+          * */
+          let dateString = (fulltextNewsDict.publishDate.content) ?
+            '<p class="newsroomArticlePublishedDate">' + fulltextNewsDict.publishDate.content + '</p>' :
+            '<span class="newsroomArticlePublishedDate d-none hidden visually-hidden">No Publish Date Provided</span>';
+
+
+
+
+
 
 
 
@@ -261,17 +277,6 @@
             (fulltextNewsDict.articleSetup.content) ?
             '<p class="newsroomArticleLead">' + fulltextNewsDict.articleSetup.content + '</p>' :
             '<span class="newsroomArticleLead d-none hidden visually-hidden">No Article Setup Provided</span>';
-
-
-
-
-         /***
-          *  publish date
-          * 
-          * */
-          let dateString = (fulltextNewsDict.publishDate.content) ?
-            '<p class="newsroomArticlePublishedDate">' + fulltextNewsDict.publishDate.content + '</p>' :
-            '<span class="newsroomArticlePublishedDate d-none hidden visually-hidden">No Publish Date Provided</span>';
 
 
 
@@ -311,6 +316,7 @@
                 formattedTopics,
                 titleWrapper,
 
+                byLine,
                 dateString,
 
 
