@@ -263,6 +263,17 @@
 
 
 
+         /***
+          *  prioritize media library image
+          * 
+          * */
+         let imageString = (fulltextNewsDict.mediaImage.content) ?
+            mediaTag(fulltextNewsDict.mediaImage.content) :
+            externalImageTag(fulltextNewsDict.externalImage.content, fulltextNewsDict.externalImageAlt.content, fulltextNewsDict.contentName.content);
+
+
+
+
 
 
 
@@ -281,13 +292,7 @@
 
 
 
-        /***
-          *  prioritize media library image
-          * 
-          * */
-         let imageString = (fulltextNewsDict.mediaImage.content) ?
-            mediaTag(fulltextNewsDict.mediaImage.content) :
-            externalImageTag(fulltextNewsDict.externalImage.content, fulltextNewsDict.externalImageAlt.content, fulltextNewsDict.contentName.content);
+
 
 
 
