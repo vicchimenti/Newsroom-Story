@@ -212,6 +212,21 @@
              contentId: getContentValues('<t4 type="meta" meta="content_id" />')
  
          };
+
+
+
+
+
+
+
+         /***
+          *  html defaults
+          * 
+          * */
+         let openImageWrapper = '<div class="newsroomFeaturedImageWrapper">';
+         let closeImageWrapper = '</div>';
+
+         
  
 
 
