@@ -257,7 +257,7 @@
           * 
           * */
           let dateString = (fulltextNewsDict.publishDate.content) ?
-            '<p class="newsroomArticlePublishedDate">' + fulltextNewsDict.publishDate.content + '</p>' :
+            '<div class="newsroomArticlePublishedDate"><p>' + fulltextNewsDict.publishDate.content + '</p></div>' :
             '<span class="newsroomArticlePublishedDate d-none hidden visually-hidden">No Publish Date Provided</span>';
 
 
