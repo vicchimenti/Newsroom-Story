@@ -281,7 +281,7 @@
          * 
          * */
 
-         let listofTopics = (fulltextNewsDict.topics.content) ?
+         let formattedTopics = (fulltextNewsDict.topics.content) ?
             processList(fulltextNewsDict.topics.content) :
             '<span class="newsroomArticleTopicsHeader d-none hidden visually-hidden">No Valid Topic Provided</span>';
 
