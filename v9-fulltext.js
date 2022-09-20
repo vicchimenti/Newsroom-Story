@@ -126,16 +126,41 @@
      */
     function assignList(arrayOfValues) {
 
-        // <p class="newsroomArticleTopicsHeader">Campus Community / People of SU</p>
-
         let listValues = '';
 
         for (let i = 0; i < arrayOfValues.length; i++) {
 
-            listValues += '<li class="tag">' + arrayOfValues[i].trim() + '</li>';
+            if (i < arrayOfValues.length-1) {
+
+                listValues += + arrayOfValues[i].trim() + ' / ';
+
+            } else {
+
+                listValues += + arrayOfValues[i].trim();
+
+            }
+
         }
 
         return listValues;
+    }
+
+
+
+
+    /***
+     *      Processes and formats list items into their wrapper
+     */
+    function processList(rawValues) {
+
+        let arrayOfTops = rawValues.split(',');
+        let listItems = assignList(arrayOfTops) || null;
+
+        let result = (listItems) ?
+        '<p class="newsroomArticleTopicsHeader">' + listItems + '</p>':
+        '<span class="newsroomArticleTopicsHeader d-none hidden visually-hidden">No Valid Topic Provided</span>';
+
+        return result;
     }
  
  
@@ -262,16 +287,21 @@
          *  process categories
          * 
          * */
-        if (fulltextNewsDict.topics.content) {
 
-            let arrayOfTops = fulltextNewsDict.topics.content.split(',');
-            let listItems = assignList(arrayOfTops);
+        let listofTopics = (fulltextNewsDict.topics.content) ?
+            processList(fulltextNewsDict.topics.content) :
+            '<span class="newsroomArticleTopicsHeader d-none hidden visually-hidden">No Valid Topic Provided</span>';
 
-            // <p class="newsroomArticleTopicsHeader">Campus Community / People of SU</p>
+        // if (fulltextNewsDict.topics.content) {
 
-            // Print any tags that were selected
-            listOfCats = '<div class="newsroomArticle tags topics visually-hidden hidden"><ul class="categories">' + listItems + '</ul></div><br>';
-        }
+        //     let arrayOfTops = fulltextNewsDict.topics.content.split(',');
+        //     let listItems = assignList(arrayOfTops);
+
+        //     // <p class="newsroomArticleTopicsHeader">Campus Community / People of SU</p>
+
+        //     // Print any tags that were selected
+        //     listOfCats = '<div class="newsroomArticle tags topics visually-hidden hidden"><ul class="categories">' + listItems + '</ul></div><br>';
+        // }
 
 
    
