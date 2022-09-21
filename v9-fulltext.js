@@ -233,6 +233,8 @@
          let closeContainer = '</div>';
          let openByline = '<div class="newsroomArticleByline col-md-12">';
          let closeByline = '</div>';
+         let openImgAttributes = '<div class="newsroomFeaturedImageAttributes container">';
+         let closeImgAttributes = '</div>';
 
          
  
@@ -362,12 +364,10 @@
                 openByline,
                 byLine,
                 dateString,
-
-
-
+                closeByline,
+                closeRow,
+                closeContainer,
                 openImageWrapper,
-
-
                 imageString,
 
 
