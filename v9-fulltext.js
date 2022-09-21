@@ -235,6 +235,8 @@
          let closeByline = '</div>';
          let openImgAttributes = '<div class="newsroomFeaturedImageAttributes container">';
          let closeImgAttributes = '</div>';
+         let openSummaryContainer = '<div class="newsroomArticleMain container">';
+         let closeSummaryContainer = '</div>';
 
          
  
