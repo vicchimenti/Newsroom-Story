@@ -132,11 +132,11 @@
 
             if (i < arrayOfValues.length-1) {
 
-                listValues += + arrayOfValues[i].trim() + ' / ';
+                listValues += '' + arrayOfValues[i].trim() + ' / ';
 
             } else {
 
-                listValues += + arrayOfValues[i].trim();
+                listValues += '' + arrayOfValues[i].trim();
 
             }
 
