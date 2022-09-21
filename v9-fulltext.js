@@ -327,7 +327,7 @@
           * 
           * */
           let captionString = (fulltextNewsDict.caption.content) ?
-            'div class="newsroomFeaturedImageCaption col-md-9"><p>' + fulltextNewsDict.caption.content + '</p></div>':
+            '<div class="newsroomFeaturedImageCaption col-md-9"><p>' + fulltextNewsDict.caption.content + '</p></div>':
             '<span class="newsroomFeaturedImageCaption d-none hidden visually-hidden">No Caption Provided</span>';
 
 
