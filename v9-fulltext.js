@@ -346,28 +346,23 @@
 
 
 
-       /***
-        *  full story
-        * 
-        * */
-        let fullStoryString = (fulltextNewsDict.fullStory.content) ?
-          '<div class="articleText standardContent">' + fulltextNewsDict.fullStory.content + '</div>':
-          '<span class="articleText d-none hidden visually-hidden">No Full Story Provided</span>';
+         /***
+          *  full story
+          * 
+          * */
+          let fullStoryString = (fulltextNewsDict.fullStory.content) ?
+            '<div class="articleText standardContent">' + fulltextNewsDict.fullStory.content + '</div>':
+            '<span class="articleText d-none hidden visually-hidden">No Full Story Provided</span>';
 
 
 
 
+         /***
+          *  process categories
+          * 
+          * */
 
-
-
-
-
-        /***
-         *  process categories
-         * 
-         * */
-
-         let formattedTopics = (fulltextNewsDict.topics.content) ?
+          let formattedTopics = (fulltextNewsDict.topics.content) ?
             processList(fulltextNewsDict.topics.content) :
             '<span class="newsroomArticleTopicsHeader d-none hidden visually-hidden">No Valid Topic Provided</span>';
 
