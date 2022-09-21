@@ -87,17 +87,17 @@
       */
      function mediaTag(mediaPath) {
  
-         let itemId = content.get('Media Library Image').getID();
-         let mediaInfo = getMediaInfo(itemId);
-         let media = readMedia(itemId);
-         let info = new ImageInfo();
-         info.setInput(media);
- 
-         let mediaHTML = (info.check()) ?
-             '<img src="' + mediaPath + '" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
-             '<span class="newsroomImageWrapper d-none visually-hidden hidden">Invalid Media ID</span>';
- 
-         return mediaHTML;
+        let itemId = content.get('Media Library Image').getID();
+        let mediaInfo = getMediaInfo(itemId);
+        let media = readMedia(itemId);
+        let info = new ImageInfo();
+        info.setInput(media);
+
+        let mediaHTML = (info.check()) ?
+            '<img src="' + mediaPath + '" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+            '<span class="newsroomImageWrapper d-none visually-hidden hidden">Invalid Media ID</span>';
+
+        return mediaHTML;
      }
 
 
