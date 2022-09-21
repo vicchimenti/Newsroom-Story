@@ -300,12 +300,23 @@
 
 
          /***
-          *  publish date
+          *  image credits
           * 
           * */
           let imageCreditString = (fulltextNewsDict.imageCredit.content) ?
             '<div class="newsroomFeaturedImageCredit col-md-3"><p>Image credit: ' + fulltextNewsDict.imageCredit.content + '</p></div>' :
             '<span class="newsroomFeaturedImageCredit d-none hidden visually-hidden">No Image Credit Provided</span>';
+
+
+
+
+         /***
+          *  image credits
+          * 
+          * */
+          let captionString = (fulltextNewsDict.caption.content) ?
+            'div class="newsroomFeaturedImageCaption col-md-9"><p>' + fulltextNewsDict.caption.content + '</p></div>':
+            '<span class="newsroomFeaturedImageCaption d-none hidden visually-hidden">No Caption Provided</span>';
 
 
 
@@ -372,8 +383,7 @@
                 openImgAttributes,
                 openRow,
                 imageCreditString,
-
-
+                captionString,
                 closeRow,
                 closeImgAttributes,
                 closeImageWrapper,
