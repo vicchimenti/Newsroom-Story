@@ -369,9 +369,15 @@
                 closeContainer,
                 openImageWrapper,
                 imageString,
+                openImgAttributes,
+                openRow,
 
 
+                closeRow,
+                closeImgAttributes,
                 closeImageWrapper,
+
+                
                 summaryString,
 
                 closeWrapper
