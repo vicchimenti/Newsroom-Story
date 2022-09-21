@@ -245,8 +245,8 @@
          let addThis = '<div class="addthis_inline_share_toolbox"></div>';
          let openBody = '<div class="newsroomArticleBody col-md-8">';
          let closeBody = '</div>';
-         let openArticleText = '<div class="articleText standardContent">';
-         let closeArticleText = '</div>';
+         let openFooterShare = '<div class="newsroomArticleShare col-md-8 offset-md-3">';
+         let closeFooterShare = '</div>';
 
          
  
@@ -416,6 +416,9 @@
                 openBody,
                 summaryString,
                 fullStoryString,
+                closeBody,
+                closeRow,
+                openRow,
 
                 closeWrapper
              ]
