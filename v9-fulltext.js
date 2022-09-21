@@ -239,6 +239,12 @@
          let closeImgAttributes = '</div>';
          let openSummaryContainer = '<div class="newsroomArticleMain container">';
          let closeSummaryContainer = '</div>';
+         let openNewsShare = '<div class="newsroomArticleShare">';
+         let closeNewsShare = '</div>';
+         let shareThis = '<h3>Share this</h3>';
+         let addThis = '<div class="addthis_inline_share_toolbox"></div>';
+         let openBody = '<div class="newsroomArticleBody col-md-8">';
+         let closeBody = '</div>';
 
          
  
@@ -392,6 +398,13 @@
                 closeImgAttributes,
                 closeImageWrapper,
                 openSummaryContainer,
+                openRow,
+                openColMd3,
+                openNewsShare,
+                shareThis,
+                addThis,
+                closeNewsShare,
+                closeColMd3,
 
 
                 summaryString,
