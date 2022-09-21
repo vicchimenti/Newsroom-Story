@@ -323,17 +323,12 @@
 
 
          /***
-          *  image credits
+          *  image caption
           * 
           * */
           let captionString = (fulltextNewsDict.caption.content) ?
             'div class="newsroomFeaturedImageCaption col-md-9"><p>' + fulltextNewsDict.caption.content + '</p></div>':
             '<span class="newsroomFeaturedImageCaption d-none hidden visually-hidden">No Caption Provided</span>';
-
-
-
-
-
 
 
 
@@ -347,6 +342,17 @@
             (fulltextNewsDict.articleSetup.content) ?
             '<p class="newsroomArticleLead">' + fulltextNewsDict.articleSetup.content + '</p>' :
             '<span class="newsroomArticleLead d-none hidden visually-hidden">No Article Setup Provided</span>';
+
+
+
+
+       /***
+        *  full story
+        * 
+        * */
+        let fullStoryString = (fulltextNewsDict.fullStory.content) ?
+          '<div class="articleText standardContent">' + fulltextNewsDict.fullStory.content + '</div>':
+          '<span class="articleText d-none hidden visually-hidden">No Full Story Provided</span>';
 
 
 
@@ -407,9 +413,9 @@
                 addThis,
                 closeNewsShare,
                 closeColMd3,
-
-
+                openBody,
                 summaryString,
+                fullStoryString,
 
                 closeWrapper
              ]
