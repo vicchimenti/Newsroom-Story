@@ -246,7 +246,7 @@
          let openBody = '<div class="newsroomArticleBody col-md-8">';
          let closeBody = '</div>';
          let openArticleText = '<div class="articleText standardContent">';
-         let closeArticelText = '</div>';
+         let closeArticleText = '</div>';
 
          
  
