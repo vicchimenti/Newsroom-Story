@@ -10,7 +10,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 5.2.2
+     *     @version 5.2.3
      */
 
 
@@ -230,7 +230,7 @@
          let openColMd9 = '<div class="col-md-9">';
          let closeColMd9 = '</div>';
          let openColMd3 = '<div class="col-md-3">';
-         let closeColMd3 = '<div>';
+         let closeColMd3 = '</div>';
          let openContainer = '<div class="container">';
          let closeContainer = '</div>';
          let openByline = '<div class="newsroomArticleByline col-md-12">';
@@ -327,7 +327,7 @@
           * 
           * */
           let captionString = (fulltextNewsDict.caption.content) ?
-            '<div class="newsroomFeaturedImageCaption col-md-9"><p>' + fulltextNewsDict.caption.content + '</p></div>':
+            '<div class="newsroomFeaturedImageCaption col-md-9">' + fulltextNewsDict.caption.content + '</div>':
             '<span class="newsroomFeaturedImageCaption d-none hidden visually-hidden">No Caption Provided</span>';
 
 
