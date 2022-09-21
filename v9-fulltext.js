@@ -103,11 +103,11 @@
 
 
 
-    /***
-     *      Returns a formatted html img tag
-     *      for an external image
-     */
-    function externalImageTag(imagePath, imageAlt, imageTitle) {
+     /***
+      *      Returns a formatted html img tag
+      *      for an external image
+      */
+     function externalImageTag(imagePath, imageAlt, imageTitle) {
 
         let imageHTML = (imagePath && imageAlt) ?
             '<img src="' + imagePath + '" aria-label="' + imageTitle + '" alt="' + imageAlt + '" loading="auto" />' :
@@ -116,15 +116,15 @@
             '<span class="newsroomImageWrapper d-none visually-hidden hidden">Invalid Image</span>';
 
         return imageHTML;
-    }
+     }
 
 
 
 
-    /***
-     *      Returns an array of list items
-     */
-    function assignList(arrayOfValues) {
+     /***
+      *      Returns an array of list items
+      */
+     function assignList(arrayOfValues) {
 
         let listValues = '';
 
@@ -141,9 +141,9 @@
             }
 
         }
-
+        
         return listValues;
-    }
+     }
 
 
 
