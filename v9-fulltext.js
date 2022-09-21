@@ -351,7 +351,7 @@
           * 
           * */
           let fullStoryString = (fulltextNewsDict.fullStory.content) ?
-            '<div class="articleText standardContent">' + fulltextNewsDict.fullStory.content + '</div>':
+            '<div class="articleText standardContent"><p>' + fulltextNewsDict.fullStory.content + '</p></div>':
             '<span class="articleText d-none hidden visually-hidden">No Full Story Provided</span>';
 
 
@@ -400,6 +400,7 @@
                 closeRow,
                 closeImgAttributes,
                 closeImageWrapper,
+
                 openSummaryContainer,
                 openRow,
                 openColMd3,
@@ -408,17 +409,22 @@
                 addThis,
                 closeNewsShare,
                 closeColMd3,
+
                 openBody,
                 summaryString,
                 fullStoryString,
                 closeBody,
+
                 closeRow,
                 openRow,
+
                 openFooterShare,
                 shareThis,
                 addThis,
                 closeFooterShare,
+
                 closeSummaryContainer,
+
                 closeWrapper
              ]
          );
