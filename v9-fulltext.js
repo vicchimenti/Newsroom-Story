@@ -371,13 +371,14 @@
                 imageString,
                 openImgAttributes,
                 openRow,
+                imageCreditString,
 
 
                 closeRow,
                 closeImgAttributes,
                 closeImageWrapper,
 
-                
+
                 summaryString,
 
                 closeWrapper
