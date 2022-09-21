@@ -368,7 +368,11 @@
 
 
 
-   
+
+            
+
+
+            
          /***
           *  write document once
           * 
@@ -400,7 +404,6 @@
                 closeRow,
                 closeImgAttributes,
                 closeImageWrapper,
-
                 openSummaryContainer,
                 openRow,
                 openColMd3,
@@ -409,22 +412,17 @@
                 addThis,
                 closeNewsShare,
                 closeColMd3,
-
                 openBody,
                 summaryString,
                 fullStoryString,
                 closeBody,
-
                 closeRow,
                 openRow,
-
                 openFooterShare,
                 shareThis,
                 addThis,
                 closeFooterShare,
-
                 closeSummaryContainer,
-
                 closeWrapper
              ]
          );
