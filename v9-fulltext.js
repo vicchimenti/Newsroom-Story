@@ -10,7 +10,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 5.2.1
+     *     @version 5.2.2
      */
 
 
@@ -418,7 +418,6 @@
                 shareThis,
                 addThis,
                 closeFooterShare,
-                closeNewsShare,
                 closeSummaryContainer,
                 closeWrapper
              ]
