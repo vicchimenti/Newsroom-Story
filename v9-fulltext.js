@@ -148,20 +148,20 @@
 
 
 
-    /***
-     *      Processes and formats list items into their wrapper
-     */
-    function processList(rawValues) {
+     /***
+      *      Processes and formats list items into their wrapper
+      */
+     function processList(rawValues) {
 
         let arrayOfTops = rawValues.split(',');
         let listItems = assignList(arrayOfTops) || null;
 
         let result = (listItems) ?
-        '<p class="newsroomArticleTopicsHeader">' + listItems + '</p>':
-        '<span class="newsroomArticleTopicsHeader d-none hidden visually-hidden">No Valid Topic Provided</span>';
+            '<p class="newsroomArticleTopicsHeader">' + listItems + '</p>':
+            '<span class="newsroomArticleTopicsHeader d-none hidden visually-hidden">No Valid Topic Provided</span>';
 
         return result;
-    }
+     }
  
  
 
@@ -219,7 +219,7 @@
 
 
 
-         
+
          /***
           *  html defaults
           * 
