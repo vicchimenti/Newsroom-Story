@@ -229,6 +229,8 @@
          let closeRow = '</div>';
          let openColMd9 = '<div class="col-md-9">';
          let closeColMd9 = '</div>';
+         let openColMd3 = '<div class="col-md-3">';
+         let closeColMd3 = '<div>';
          let openContainer = '<div class="container">';
          let closeContainer = '</div>';
          let openByline = '<div class="newsroomArticleByline col-md-12">';
@@ -389,6 +391,7 @@
                 closeRow,
                 closeImgAttributes,
                 closeImageWrapper,
+                openSummaryContainer,
 
 
                 summaryString,
