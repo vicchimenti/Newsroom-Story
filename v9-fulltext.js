@@ -231,6 +231,8 @@
          let closeColMd9 = '</div>';
          let openContainer = '<div class="container">';
          let closeContainer = '</div>';
+         let openByline = '<div class="newsroomArticleByline col-md-12">';
+         let closeByline = '</div>';
 
          
  
@@ -349,12 +351,19 @@
              [
                 articleWrapper,
                 fulltextNewsDict.anchor.content,
-
+                openContainer,
+                openRow,
+                openColMd9,
                 formattedTopics,
                 titleWrapper,
+                closeColMd9,
+                closeRow,
 
                 byLine,
                 dateString,
+
+
+
                 openImageWrapper,
 
 
