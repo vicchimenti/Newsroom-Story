@@ -219,6 +219,7 @@
 
 
 
+         
          /***
           *  html defaults
           * 
@@ -248,11 +249,13 @@
          let openFooterShare = '<div class="newsroomArticleShare col-md-8 offset-md-3">';
          let closeFooterShare = '</div>';
 
+
          
  
 
 
          
+
          /***
           *  article wrapper
           * 
@@ -372,7 +375,7 @@
             
 
 
-            
+
          /***
           *  write document once
           * 
