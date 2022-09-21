@@ -85,10 +85,11 @@
      /***
       *     Returns a formatted html img tag
       *     for a media library image element
+      * 'Media Library Image'
       */
      function mediaTag(mediaPath) {
  
-        let itemId = content.get('Media Library Image').getID();
+        let itemId = content.get(mediaPath).getID();
         let mediaInfo = getMediaInfo(itemId);
         let media = readMedia(itemId);
         let info = new ImageInfo();
