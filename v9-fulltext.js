@@ -358,7 +358,8 @@
                 titleWrapper,
                 closeColMd9,
                 closeRow,
-
+                openRow,
+                openByline,
                 byLine,
                 dateString,
 
