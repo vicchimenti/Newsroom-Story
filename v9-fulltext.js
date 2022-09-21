@@ -227,6 +227,10 @@
          let closeImageWrapper = '</div>';
          let openRow = '<div class="row">';
          let closeRow = '</div>';
+         let openColMd9 = '<div class="col-md-9">';
+         let closeColMd9 = '</div>';
+         let openContainer = '<div class="container">';
+         let closeContainer = '</div>';
 
          
  
