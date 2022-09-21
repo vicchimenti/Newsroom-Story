@@ -338,9 +338,9 @@
           * 
           * */
           let summaryString = (fulltextNewsDict.articleSubhead.content) ?
-            '<p class="newsroomArticleLead">' + fulltextNewsDict.articleSubhead.content + '</p>' :
+            '<h2 class="newsroomArticleLead">' + fulltextNewsDict.articleSubhead.content + '</h2>' :
             (fulltextNewsDict.articleSetup.content) ?
-            '<p class="newsroomArticleLead">' + fulltextNewsDict.articleSetup.content + '</p>' :
+            '<h2 class="newsroomArticleLead">' + fulltextNewsDict.articleSetup.content + '</h2>' :
             '<span class="newsroomArticleLead d-none hidden visually-hidden">No Article Setup Provided</span>';
 
 
