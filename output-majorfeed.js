@@ -1,7 +1,7 @@
     /***
      *     @author  Victor Chimenti, MSCS
-     *     @file    output-categoryfeed.js
-     *                  output/categoryfeed
+     *     @file    output-majorfeed.js
+     *                  output/majorfeed
      *                  id:5150
      *
      *     This content type will work in conjunction with the
@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 4.2.3
+     *     @version 5.0
      */
 
 
