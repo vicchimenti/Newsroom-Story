@@ -10,7 +10,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 5.2.6
+     *     @version 5.2.7
      * 
      */
 
@@ -342,10 +342,10 @@
           *  article summary
           * 
           * */
-          let summaryString = (fulltextNewsDict.articleSubhead.content) ?
-            '<h2 class="newsroomArticleLead">' + fulltextNewsDict.articleSubhead.content + '</h2>' :
-            (fulltextNewsDict.articleSetup.content) ?
+          let summaryString = (fulltextNewsDict.articleSetup.content) ?
             '<h2 class="newsroomArticleLead">' + fulltextNewsDict.articleSetup.content + '</h2>' :
+            (fulltextNewsDict.articleSubhead.content) ?
+            '<h2 class="newsroomArticleLead">' + fulltextNewsDict.articleSubhead.content + '</h2>' :
             '<span class="newsroomArticleLead d-none hidden visually-hidden">No Article Setup Provided</span>';
 
 
