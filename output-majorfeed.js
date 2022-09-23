@@ -171,7 +171,7 @@
           * */
           let closeWrapper = '</article>';
           let articleWrapper = (majorNewsDict.contentId.content && majorNewsDict.headline.content) ?
-            '<article class="newsroomArticleWrapper newsroomBlurb contentItem" id="id' + majorNewsDict.contentId.content + 'category" aria-label="' + majorNewsDict.headline.content + '">' :
+            '<article class="newsroomMajorFeedItem newsroomArticleWrapper newsroomBlurb contentItem" id="id' + majorNewsDict.contentId.content + 'category" aria-label="' + majorNewsDict.headline.content + '">' :
             (majorNewsDict.contentId.content && !majorNewsDict.headline.content) ?
             '<article class="newsroomArticleWrapper newsroomBlurb contentItem" id="id' + majorNewsDict.contentId.content + 'category" aria-label="' + majorNewsDict.contentName.content + '">' :
             '<article class="newsroomArticleWrapper newsroomBlurb contentItem">';
