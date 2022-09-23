@@ -196,10 +196,10 @@
           *  article summary
           * 
           * */
-          let summaryString = (majorNewsDict.articleSubhead.content) ?
-            '<p class="newsroomArticleLead">' + majorNewsDict.articleSubhead.content + '</p>' :
-            (majorNewsDict.articleSetup.content) ?
+          let summaryString = (majorNewsDict.articleSetup.content) ?
             '<p class="newsroomArticleLead">' + majorNewsDict.articleSetup.content + '</p>' :
+            (majorNewsDict.articleSubhead.content) ?
+            '<p class="newsroomArticleLead">' + majorNewsDict.articleSubhead.content + '</p>' :
             '<span class="newsroomArticleLead d-none hidden visually-hidden">No Article Setup Provided</span>';
 
 
