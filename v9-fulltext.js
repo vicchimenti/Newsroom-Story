@@ -10,7 +10,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 5.2.9
+     *     @version 5.2.10
      * 
      */
 
@@ -244,7 +244,7 @@
          let closeSummaryContainer = '</div>';
          let openNewsShare = '<div class="newsroomArticleShare">';
          let closeNewsShare = '</div>';
-         let shareThis = '<h3>Share this</h3>';
+         let shareThis = '<h2>Share this</h2>';
          let addThis = '<div class="addthis_inline_share_toolbox"></div>';
          let shareThisEmbed = '<div class="sharethis-inline-share-buttons"></div>';
          let openBody = '<div class="newsroomArticleBody col-md-8">';
