@@ -246,6 +246,7 @@
          let closeNewsShare = '</div>';
          let shareThis = '<h3>Share this</h3>';
          let addThis = '<div class="addthis_inline_share_toolbox"></div>';
+         let shareThisEmbed = '<div class="sharethis-inline-share-buttons"></div>';
          let openBody = '<div class="newsroomArticleBody col-md-8">';
          let closeBody = '</div>';
          let openFooterShare = '<div class="newsroomArticleShare col-md-8 offset-md-3">';
@@ -414,7 +415,7 @@
                 openColMd3,
                 openNewsShare,
                 shareThis,
-                addThis,
+                shareThisEmbed,
                 closeNewsShare,
                 closeColMd3,
                 openBody,
@@ -425,7 +426,7 @@
                 openRow,
                 openFooterShare,
                 shareThis,
-                addThis,
+                shareThisEmbed,
                 closeFooterShare,
                 closeSummaryContainer,
                 closeWrapper
