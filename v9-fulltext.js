@@ -419,8 +419,6 @@
                 fullStoryString,
                 closeBody,
                 closeRow,
-                openRow,
-                closeRow,
                 closeSummaryContainer,
                 closeWrapper
              ]
