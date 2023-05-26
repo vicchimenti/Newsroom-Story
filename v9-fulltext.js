@@ -420,10 +420,6 @@
                 closeBody,
                 closeRow,
                 openRow,
-                openFooterShare,
-                shareThis,
-                shareThisEmbed,
-                closeFooterShare,
                 closeRow,
                 closeSummaryContainer,
                 closeWrapper
