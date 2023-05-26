@@ -424,6 +424,7 @@
                 shareThis,
                 shareThisEmbed,
                 closeFooterShare,
+                closeRow,
                 closeSummaryContainer,
                 closeWrapper
              ]
