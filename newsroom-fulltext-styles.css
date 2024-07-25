@@ -1,6 +1,11 @@
-.newsroomArticleShare h2, .newsroomShare h2 {
-    font-family: Oswald, sans-serif;
-    font-size: 2.4rem;
-    font-weight: 100;
-    margin-bottom: 1rem;
+.news--detail .hero--news .news--detail__details {
+
+    order: -1;
+
+}
+
+.news--detail .hero--basic .hero--basic__text .eyebrow {
+
+    order: -2;
+
 }
