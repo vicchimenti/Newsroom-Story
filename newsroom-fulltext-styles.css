@@ -9,3 +9,10 @@
     order: -2;
 
 }
+
+.news--detail figcaption {
+
+    position: relative;
+    z-index: 10;
+
+}
