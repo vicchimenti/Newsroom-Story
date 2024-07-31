@@ -31,14 +31,15 @@
                 </div>
             </div>
             <t4 type="content" name="Media Library Image" output="selective-output" process-format="true" format="<div class=&quot;news--detail__hero-photo&quot;>
-        <figure class=&quot;aspect-ratio-frame&quot; style=&quot;--aspect-ratio: 74/116&quot;>
-        <img loading=&quot;eager&quot; sizes=&quot;(min-width: 1280px) 1160px, calc(93.75vw - 21px)&quot;
-            src=&quot;<t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;43&quot; />&quot; srcset=&quot;
-    <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;43&quot; /> 500w,
-    <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;42&quot; /> 768w,
-    <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;41&quot; /> 1160w&quot; alt=&quot;<t4 type=&quot;content&quot; name=&quot;Image Caption&quot; output=&quot;normal&quot; modifiers=&quot;&quot; />&quot; class=&quot;js-processed&quot;>
-        </figure>
-    </div>" formatter="path/*" />
+                <figure class=&quot;aspect-ratio-frame&quot; style=&quot;--aspect-ratio: 74/116&quot;>
+                    <img loading=&quot;eager&quot; sizes=&quot;(min-width: 1280px) 1160px, calc(93.75vw - 21px)&quot;
+                        src=&quot;<t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;43&quot; />&quot; srcset=&quot;
+                        <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;43&quot; /> 500w,
+                        <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;42&quot; /> 768w,
+                        <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;41&quot; /> 1160w&quot; alt=&quot;<t4 type=&quot;content&quot; name=&quot;Image Caption&quot; output=&quot;normal&quot; modifiers=&quot;&quot; />&quot; class=&quot;js-processed&quot;>
+                    <figcaption></figcaption>
+                </figure>
+            </div>" formatter="path/*" />
         </div>
     </div>
 
