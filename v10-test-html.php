@@ -39,7 +39,7 @@
                         <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;41&quot; /> 1160w&quot; alt=&quot;<t4 type=&quot;content&quot; name=&quot;Image Caption&quot; output=&quot;normal&quot; modifiers=&quot;&quot; />&quot; class=&quot;js-processed&quot;>
                 </figure>
             </div>" formatter="path/*" />
-            <t4 type=&quot;content&quot; name=&quot;Image Caption&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; process-format=&quot;true&quot; format=&quot;<figcaption><t4 type=&quot;content&quot; name=&quot;Image Caption&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot;/></figcaption>&quot; />
+            <t4 type="content" name="Image Caption" output="selective-output" modifiers="striptags,htmlentities" process-format="true" format="<figcaption><t4 type=&quot;content&quot; name=&quot;Image Caption&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot;/></figcaption>" />
         </div>
     </div>
 
