@@ -21,7 +21,7 @@ try {
     list['newsTypes'] = processTags('<t4 type="content" name="News Types" output="normal" display_field="name" delimiter="|" />');
     list['newsTopics'] = processTags('<t4 type="content" name="News Topics" output="normal" display_field="name" delimiter="|" />');
     list['author'] = processTags('<t4 type="content" name="Author" output="normal" modifiers="striptags,htmlentities" />').replace(/&/gi,'&amp;');
-    list['schoolsColleges'] = processTags('<t4 type="content" name="Schools & Colleges" output="normal" display_field="name" delimiter="|" />');
+    list['schoolsColleges'] = processTags('<t4 type="content" name="Schools and Colleges" output="normal" display_field="name" delimiter="|" />');
     list['staffDepartment'] = processTags('<t4 type="content" name="Department" output="normal" display_field="value" delimiter="|" />');
     list['publishDate'] = processTags('<t4 type="content" name="Publish Date" output="normal" date_format="yyyy-MM-dd-HH:MM:ss" />');
     list['publishDateText'] = processTags('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />');
