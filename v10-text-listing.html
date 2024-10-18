@@ -1,0 +1,26 @@
+<article class="listing--item news--item global-padding--5x">
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell medium-7 large-8">
+          <div class="news--item__text text-margin-reset">
+            <h3 class="h4 funderline"><a href=""><t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" /></a></h3>
+            <div class="date"><t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" /></div>
+            <div class="global-spacing--2x">
+              <t4 type="content" name="Article Subhead" output="normal" modifiers="striptags,htmlentities" />
+            </div>
+            <div class="global-spacing--2x tags tags__links">
+              <h4 class="tags__heading show-for-sr">Tags:</h4>
+              <ul>
+                <li><a href=""><t4 type="content" name="News Topics" output="normal" display_field="value" /></a></li>
+              </ul>
+            </div>  
+          </div>       
+        </div>
+        <div class="cell medium-5 large-4">
+          <t4 type="content" name="Media Library Image" output="selective-output" process-format="true" format="<figure class=&quot;aspect-ratio-frame oho-animate oho-animate-single fade-in-big&quot; style=&quot;--aspect-ratio: 2/3&quot;>
+            <img loading=&quot;lazy&quot; src=&quot;<t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;64&quot; />&quot; alt=&quot;<t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;text/alt&quot; />&quot;>
+          </figure>" formatter="path/*" />
+        </div>
+      </div>
+    </div>
+  </article>
