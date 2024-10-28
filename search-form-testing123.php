@@ -6,7 +6,7 @@ $categoryFilters = array('newsTopics', 'newsTypes', 'schoolsColleges');
 $dateFilters = array();
 $rangeFilters = array();
 
-echo "<script>console.log('".json_encode($filters)."');</script>"; 
+echo "<script>console.log('filters: ".json_encode($filters)."');</script>"; 
 
 $i = 0;
 ?>
