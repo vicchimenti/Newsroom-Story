@@ -92,8 +92,10 @@ $i = 0;
             <div id="searchoptions-filters" class="active-filters" role="search" data-t4-ajax-group="courseSearch" aria-label="Deselect Filters">
                 <div id="event-filters" class="active-filters--list" >
                     <span>Active filters:</span>
+                    <?php
                     echo "<script>console.log('active filters: ".json_encode($filters)."');</script>"; 
-                    <?php if ($filters !== null) : ?>
+                    ?>
+                    <?php if ($filters) : ?>
                         <ul class="no-bullet">
                             <?php
                             foreach ($categoryFilters as $key) {
