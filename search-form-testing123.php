@@ -6,6 +6,8 @@ $categoryFilters = array('newsTopics', 'newsTypes', 'schoolsColleges');
 $dateFilters = array();
 $rangeFilters = array();
 
+echo "<script>console.log('".json_encode($filters)."');</script>"; 
+
 $i = 0;
 ?>
 <section class="su-listing">
