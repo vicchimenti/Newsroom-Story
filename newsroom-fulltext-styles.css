@@ -16,3 +16,20 @@
     text-align: center;
 
 }
+
+@media print, screen and (min-width: 64.0625em) {
+    .news--detail figcaption {
+      font-size: 1rem;
+    }
+}
+
+/* .news--detail figcaption {
+    font-family: Montserrat, Gill Sans, sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.75;
+    margin-top: 0.5rem;
+    caption-side: bottom;
+    color: #262626;
+} */
+
