@@ -1,4 +1,4 @@
-.news--detail .hero--news .news--detail__details {
+/* .news--detail .hero--news .news--detail__details {
 
     order: -1;
 
@@ -8,13 +8,13 @@
 
     order: -2;
 
-}
+} */
 
 .news--detail figcaption {
 
-    padding: 0.5rem;
+    /* padding: 0.5rem;
     position: relative;
     text-align: center;
-    z-index: 10;
+    z-index: 10; */
 
 }
