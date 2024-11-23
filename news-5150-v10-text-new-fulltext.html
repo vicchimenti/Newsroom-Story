@@ -1,45 +1,44 @@
 <div class="hero--basic hero--news global-padding--15x<t4 type="content" name="Media Library Image" output="selective-output" format="-ignore hero--news__photo" formatter="path/*" /> bg--dark">
+  <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+          <div class="cell auto">
+              <div class="hero--basic__text text-margin-reset">
+                  <h1>
+                      <t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" />
+                  </h1>
+                  <div class="eyebrow">
+                      <a href="<?php tags_keys('<t4 type="content" name="News Types" output="normal" display_field="name" delimiter="|" />', '<t4 type="navigation" name="Link to News & Stories" id="991" />', 'newsTypes', '|'); ?>">
+                          <t4 type="content" name="News Types" output="normal" display_field="value" modifiers="striptags,htmlentities" />
+                      </a>
+                  </div>
 
-<div class="grid-container">
-    <div class="grid-x grid-margin-x">
-        <div class="cell auto">
-            <div class="hero--basic__text text-margin-reset">
-                <h1>
-                    <t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" />
-                </h1>
-                <div class="eyebrow">
-                    <a href="<?php tags_keys('<t4 type="content" name="News Types" output="normal" display_field="name" delimiter="|" />', '<t4 type="navigation" name="Link to News & Stories" id="991" />', 'newsTypes', '|'); ?>">
-                        <t4 type="content" name="News Types" output="normal" display_field="value" modifiers="striptags,htmlentities" />
-                    </a>
-                </div>
-
-                <div class="news--detail__details global-spacing--0x text-margin-reset">
-                    <t4 type="content" name="Author" output="selective-output" process-format="true" format="<p><strong>Written by
-            <t4 type=&quot;content&quot; name=&quot;Author&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot; />
-            </strong></p>" />
-                    <p>
-                        <t4 type="content" name="Publish Date" output="normal" date_format="EEEE, MMMM d, yyyy" />
-                    </p>
-                </div>
-
-
-                <t4 type="navigation" name="Breadcrumbs Fulltext" id="1027" />
+                  <div class="news--detail__details global-spacing--0x text-margin-reset">
+                      <t4 type="content" name="Author" output="selective-output" process-format="true" format="<p><strong>Written by
+              <t4 type=&quot;content&quot; name=&quot;Author&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot; />
+              </strong></p>" />
+                      <p>
+                          <t4 type="content" name="Publish Date" output="normal" date_format="EEEE, MMMM d, yyyy" />
+                      </p>
+                  </div>
 
 
-            </div>
-        </div>
-    </div>
-    <t4 type="content" name="Media Library Image" output="selective-output" process-format="true" format="<div class=&quot;news--detail__hero-photo&quot;>
-        <figure class=&quot;aspect-ratio-frame&quot; style=&quot;--aspect-ratio: 74/116&quot;>
-            <img loading=&quot;eager&quot; sizes=&quot;(min-width: 1280px) 1160px, calc(93.75vw - 21px)&quot;
-                src=&quot;<t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;43&quot; />&quot; srcset=&quot;
-                <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;43&quot; /> 500w,
-                <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;42&quot; /> 768w,
-                <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;41&quot; /> 1160w&quot; alt=&quot;<t4 type=&quot;content&quot; name=&quot;Image Caption&quot; output=&quot;normal&quot; modifiers=&quot;&quot; />&quot; class=&quot;js-processed&quot; />        
-                <t4 type=&quot;content&quot; name=&quot;Image Caption&quot; output=&quot;selective-output&quot; process-format=&quot;True&quot; format=&quot;<figcaption><blockquote><t4 type=&quot;content&quot; name=&quot;Image Caption&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot;/></blockquote></figcaption>&quot; />
-        </figure>
-    </div>" formatter="path/*" />
-</div>
+                  <t4 type="navigation" name="Breadcrumbs Fulltext" id="1027" />
+
+
+              </div>
+          </div>
+      </div>
+      <t4 type="content" name="Media Library Image" output="selective-output" process-format="true" format="<div class=&quot;news--detail__hero-photo&quot;>
+          <figure class=&quot;aspect-ratio-frame&quot; style=&quot;--aspect-ratio: 74/116&quot;>
+              <img loading=&quot;eager&quot; sizes=&quot;(min-width: 1280px) 1160px, calc(93.75vw - 21px)&quot;
+                  src=&quot;<t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;43&quot; />&quot; srcset=&quot;
+                  <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;43&quot; /> 500w,
+                  <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;42&quot; /> 768w,
+                  <t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;41&quot; /> 1160w&quot; alt=&quot;<t4 type=&quot;content&quot; name=&quot;Image Caption&quot; output=&quot;normal&quot; modifiers=&quot;&quot; />&quot; class=&quot;js-processed&quot; />        
+                  <t4 type=&quot;content&quot; name=&quot;Image Caption&quot; output=&quot;selective-output&quot; process-format=&quot;True&quot; format=&quot;<figcaption><blockquote><t4 type=&quot;content&quot; name=&quot;Image Caption&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot;/></blockquote></figcaption>&quot; />
+          </figure>
+      </div>" formatter="path/*" />
+  </div>
 </div>
 
 
