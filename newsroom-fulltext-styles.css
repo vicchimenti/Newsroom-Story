@@ -1,4 +1,4 @@
-/* .news--detail .hero--news .news--detail__details {
+.news--detail .hero--news .news--detail__details {
 
     order: -1;
 
@@ -8,7 +8,7 @@
 
     order: -2;
 
-} */
+}
 
 .news--detail figcaption {
 
