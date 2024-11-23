@@ -1,14 +1,13 @@
-.news--detail .hero--news .news--detail__details {
+.news--detail .hero--basic.hero--news .news--detail__details {
 
     order: -1;
-
-}
-
-.news--detail .hero--basic .hero--basic__text .eyebrow {
-
+  
+  }
+  .news--detail .hero--basic.hero--news .hero--basic__text .eyebrow {
+  
     order: -2;
-
-}
+  
+  }
 
 .news--detail figcaption {
 
