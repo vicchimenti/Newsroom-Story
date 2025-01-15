@@ -134,7 +134,7 @@
 <h2 class=&quot;oho-animate fade-in oho-animate--in&quot;>Contact Listing</h2>
 
 <div class=&quot;section-heading__link global-spacing--2x oho-animate fade-in oho-animate--in&quot;>
-<a href=&quot;<t4 type=&quot;navigation&quot; name=&quot;Faculty and Staff Bio Link to Home&quot; id=&quot;995&quot; />&quot;>Factulty and Staff Directory</a>
+<a href=&quot;<t4 type=&quot;navigation&quot; name=&quot;Faculty and Staff Bio Link to Home&quot; id=&quot;995&quot; />&quot;>Faculty and Staff Directory</a>
 </div>
 
 </div>
