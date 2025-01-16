@@ -74,7 +74,7 @@
         </div>
     </div>
     <div class="cell medium-4">
-        <t4 type="content" name="Callout CTA Title" output="selective-output" process-format="true" format="<article class=&quot;callout text-margin-reset oho-animate oho-animate-single fade-in oho-animate--in&quot;>
+        <t4 type="content" name="Callout Title" output="selective-output" process-format="true" format="<article class=&quot;callout text-margin-reset oho-animate oho-animate-single fade-in oho-animate--in&quot;>
 <h2 class=&quot;h6&quot;>
     <t4 type=&quot;content&quot; name=&quot;Callout Title&quot; output=&quot;normal&quot; modifiers=&quot;&quot; />
 </h2>
