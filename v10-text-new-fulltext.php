@@ -65,7 +65,7 @@
                 </p>
             </div>
             <div class="global-spacing--3x">
-                <?php if (!empty($tags_list)) : ?>
+                <?php if (!empty($newsTopics)) : ?>
                     <div class="tags tags__links">                        
                         <h2 class="tags__heading show-for-sr">Tags:</h2>
                         <ul>
