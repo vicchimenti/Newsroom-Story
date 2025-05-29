@@ -58,14 +58,7 @@
                     <t4 type="content" name="Story article" output="normal" modifiers="medialibrary,nav_sections" />
                 </div><!-- /.wysiwyg -->
             </div>
-            <div class="news--detail__details global-spacing--3x text-margin-reset">
-                <t4 type="content" name="Author" output="selective-output" process-format="true" format="<p><strong>Written by
-    <t4 type=&quot;content&quot; name=&quot;Author&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot; />
-    </strong></p>" />
-                <p>
-                    <t4 type="content" name="Publish Date" output="normal" date_format="EEEE, MMMM d, yyyy" />
-                </p>
-            </div>
+            <div class="news--detail__details global-spacing--3x text-margin-reset"></div>
             <div class="global-spacing--3x">
                 <?php if (!empty($newsTopics)) : ?>
                     <div class="tags tags__links">                        
