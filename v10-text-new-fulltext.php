@@ -65,12 +65,14 @@
                 </p>
             </div>
             <div class="global-spacing--3x">
-                <div class="tags tags__links">
-                    <h2 class="tags__heading show-for-sr">Tags:</h2>
-                    <ul>
-                        <?php tags_list('<t4 type="content" name="News Topics" output="normal" display_field="name"  delimiter="|" />', '<t4 type="navigation" name="Link to News & Stories" id="991" />', 'newsTopics', '|'); ?>
-                    </ul>
-                </div>
+                <?php if (!empty($tags_list)) : ?>
+                    <div class="tags tags__links">                        
+                        <h2 class="tags__heading show-for-sr">Tags:</h2>
+                        <ul>
+                            <?php tags_list('<t4 type="content" name="News Topics" output="normal" display_field="name"  delimiter="|" />', '<t4 type="navigation" name="Link to News & Stories" id="991" />', 'newsTopics', '|'); ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
         <div class="cell medium-4">
