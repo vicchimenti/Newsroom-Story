@@ -16,8 +16,8 @@
 
                 <div class="news--detail__details global-spacing--0x text-margin-reset">
                     <t4 type="content" name="Author" output="selective-output" process-format="true" format="<p><strong>Written by
-              <t4 type=&quot;content&quot; name=&quot;Author&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot; />
-              </strong></p>" />
+                        <t4 type=&quot;content&quot; name=&quot;Author&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot; />
+                        </strong></p>" />
                     <p>
                         <t4 type="content" name="Publish Date" output="normal" date_format="EEEE, MMMM d, yyyy" />
                     </p>
