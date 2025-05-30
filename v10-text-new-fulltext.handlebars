@@ -8,14 +8,12 @@
           <h1>
             {{{publish element="Title"}}}
           </h1>
-          
-          {{#ifSet element="News Types"}}
           <div class="eyebrow">
-            <a href="{{nav id="991" name="Link to News & Stories"}}">
-              {{{publish element="News Types" output="normal" display_field="value"}}}
-            </a>
+            {{#ifSet element="News Types" ~}}
+              <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{value}}">{{value}}></a>
+            {{/ifSet}}
           </div>
-          {{/ifSet}}
+          
 
           <div class="news--detail__details global-spacing--0x text-margin-reset">
             {{#ifSet element="Author"}}
@@ -76,7 +74,7 @@
       
       <div class="global-spacing--5x">
         <div class="wysiwyg">
-          {{{publish element="Story article" output="normal" modifiers="medialibrary,nav_sections"}}}
+          {{{publish element="Story article"}}}
         </div>
       </div>
       
