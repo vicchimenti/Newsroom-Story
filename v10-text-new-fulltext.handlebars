@@ -1,5 +1,4 @@
-```handlebars
-{{!-- News Detail Hero Section --}}
+{{! News Detail Hero Section }}
 <div class="hero--basic hero--news global-padding--15x bg--dark">
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
@@ -14,9 +13,11 @@
             </a>
           </div>
 
-          <div class="news--detail__details global-spacing--0x text-margin-reset">
+          <div
+            class="news--detail__details global-spacing--0x text-margin-reset"
+          >
             {{#if author}}
-            <p><strong>Written by {{author}}</strong></p>
+              <p><strong>Written by {{author}}</strong></p>
             {{/if}}
             <p>
               {{publishDate}}
@@ -28,33 +29,33 @@
       </div>
     </div>
 
-    {{!-- Hero Image --}}
+    {{! Hero Image }}
     {{#if heroImage}}
-    <div class="news--detail__hero-photo">
-      <figure class="aspect-ratio-frame" style="--aspect-ratio: 74/116">
-        <img 
-          loading="eager" 
-          sizes="(min-width: 1280px) 1160px, calc(93.75vw - 21px)"
-          src="{{heroImage.src}}"
-          srcset="
+      <div class="news--detail__hero-photo">
+        <figure class="aspect-ratio-frame" style="--aspect-ratio: 74/116">
+          <img
+            loading="eager"
+            sizes="(min-width: 1280px) 1160px, calc(93.75vw - 21px)"
+            src="{{heroImage.src}}"
+            srcset="
             {{heroImage.srcset500}} 500w,
             {{heroImage.srcset768}} 768w,
             {{heroImage.srcset1160}} 1160w"
-          alt="{{heroImage.alt}}"
-          class="js-processed"
-        />
-        {{#if heroImage.caption}}
-        <figcaption>
-          <blockquote>{{heroImage.caption}}</blockquote>
-        </figcaption>
-        {{/if}}
-      </figure>
-    </div>
+            alt="{{heroImage.alt}}"
+            class="js-processed"
+          />
+          {{#if heroImage.caption}}
+            <figcaption>
+              <blockquote>{{heroImage.caption}}</blockquote>
+            </figcaption>
+          {{/if}}
+        </figure>
+      </div>
     {{/if}}
   </div>
 </div>
 
-{{!-- News Detail Body --}}
+{{! News Detail Body }}
 <div class="news--detail__body grid-container global-padding--10x">
   <div class="grid-x grid-margin-x">
     <div class="cell medium-8">
@@ -69,10 +70,10 @@
         </div>
       </div>
       <div class="news--detail__details global-spacing--3x text-margin-reset">
-        {{!-- Optional additional details can be added here --}}
+        {{! Optional additional details can be added here }}
       </div>
-      
-      {{!-- Tags Section --}}
+
+      {{! Tags Section }}
       <div class="global-spacing--3x">
         <div class="tags tags__links">
           <h2 class="tags__heading show-for-sr">Tags:</h2>
@@ -85,39 +86,46 @@
       </div>
     </div>
 
-    {{!-- Sidebar Callout --}}
+    {{! Sidebar Callout }}
     <div class="cell medium-4">
       {{#if callout}}
-      <article class="callout text-margin-reset oho-animate oho-animate-single fade-in oho-animate--in">
-        <h2 class="h6">
-          {{callout.title}}
-        </h2>
+        <article
+          class="callout text-margin-reset oho-animate oho-animate-single fade-in oho-animate--in"
+        >
+          <h2 class="h6">
+            {{callout.title}}
+          </h2>
 
-        <div class="global-spacing--2x">
-          <p>
-            {{callout.description}}
-          </p>
-        </div>
-        <div class="global-spacing--3x">
-          <a href="{{callout.ctaLink}}" class="btn">
-            {{callout.ctaTitle}}
-          </a>
-        </div>
-      </article>
+          <div class="global-spacing--2x">
+            <p>
+              {{callout.description}}
+            </p>
+          </div>
+          <div class="global-spacing--3x">
+            <a href="{{callout.ctaLink}}" class="btn">
+              {{callout.ctaTitle}}
+            </a>
+          </div>
+        </article>
       {{/if}}
     </div>
   </div>
 </div>
 
-{{!-- Related News Stories Section --}}
-<section class="related-news-stories-section global-padding--15x bg--dark bg--blue bg--gradient">
+{{! Related News Stories Section }}
+<section
+  class="related-news-stories-section global-padding--15x bg--dark bg--blue bg--gradient"
+>
   <div class="grid-container oho-animate-sequence oho-animate--in">
     <div class="grid-x grid-margin-x">
       <div class="cell large-9">
         <div class="section-heading--basic text-margin-reset">
-          <h2 class="oho-animate fade-in oho-animate--in">Similar News &amp; Stories</h2>
+          <h2 class="oho-animate fade-in oho-animate--in">Similar News &amp;
+            Stories</h2>
 
-          <div class="section-heading__link global-spacing--2x oho-animate fade-in oho-animate--in">
+          <div
+            class="section-heading__link global-spacing--2x oho-animate fade-in oho-animate--in"
+          >
             <a href="{{similarNewsLink}}">More Similar News &amp; Stories</a>
           </div>
         </div>
@@ -138,30 +146,32 @@
   </div>
 </section>
 
-{{!-- Contact Listing Section --}}
+{{! Contact Listing Section }}
 {{#if contactListing}}
-<section class="contact-listing-section global-spacing--10x">
-  <div class="grid-container oho-animate-sequence oho-animate--in">
-    <div class="grid-x grid-margin-x">
-      <div class="cell large-9">
-        <div class="section-heading--basic text-margin-reset">
-          <h2 class="oho-animate fade-in oho-animate--in">Contact Listing</h2>
+  <section class="contact-listing-section global-spacing--10x">
+    <div class="grid-container oho-animate-sequence oho-animate--in">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-9">
+          <div class="section-heading--basic text-margin-reset">
+            <h2 class="oho-animate fade-in oho-animate--in">Contact Listing</h2>
 
-          <div class="section-heading__link global-spacing--2x oho-animate fade-in oho-animate--in">
-            <a href="{{contactDirectoryLink}}">Faculty and Staff Directory</a>
+            <div
+              class="section-heading__link global-spacing--2x oho-animate fade-in oho-animate--in"
+            >
+              <a href="{{contactDirectoryLink}}">Faculty and Staff Directory</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  
-  {{#each contacts}}
-    <div class="contact-item">
-      <h3>{{this.name}}</h3>
-      <p>{{this.title}}</p>
-      <p>{{this.contact}}</p>
-    </div>
-  {{/each}}
-</section>
+
+    {{#each contacts}}
+      <div class="contact-item">
+        <h3>{{this.name}}</h3>
+        <p>{{this.title}}</p>
+        <p>{{this.contact}}</p>
+      </div>
+    {{/each}}
+  </section>
 {{/if}}
 ```
