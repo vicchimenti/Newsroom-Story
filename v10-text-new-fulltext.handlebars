@@ -11,7 +11,7 @@
           <div class="eyebrow">
             {{#ifSet element="News Types" ~}}
               <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{value}}">{{value}}></a>
-            {{/ifSet}}
+            {{~/ifSet}}
           </div>
           <div class="news--detail__details global-spacing--0x text-margin-reset">
             {{#ifSet element="Author"}}
@@ -64,7 +64,7 @@
       </div>
       
       <div class="global-spacing--3x">
-        {{#ifSet element="News Topics"}}
+        {{#ifSet element="News Topics" ~}}
         <div class="tags tags__links">
           <h2 class="tags__heading show-for-sr">Tags:</h2>
           <ul>
@@ -75,7 +75,7 @@
             {{/each}}
           </ul>
         </div>
-        {{/ifSet}}
+        {{~/ifSet}}
       </div>
     </div>
     
@@ -99,7 +99,7 @@
                 {{publish element="Callout CTA Title"}}
               </a>
             </div>
-          {{/ifSet}}
+          {{~/ifSet}}
         </article>
       {{~/ifSet}}
     </div>
