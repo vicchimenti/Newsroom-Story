@@ -60,7 +60,7 @@
             </div>
             <div class="news--detail__details global-spacing--3x text-margin-reset"></div>
             <div class="global-spacing--3x">
-                <?php if (!empty($newsTopics)) : ?>
+                <?php if (!empty('<t4 type="content" name="News Types" output="normal" display_field="value" modifiers="js-var" />')) : ?>
                     <div class="tags tags__links">                        
                         <h2 class="tags__heading show-for-sr">Tags:</h2>
                         <ul>
