@@ -31,24 +31,13 @@
     {{#ifSet element="Media Library Image"}}
     <div class="news--detail__hero-photo">
       <figure class="aspect-ratio-frame" style="--aspect-ratio: 74/116">
-        <img 
-          loading="eager" 
-          sizes="(min-width: 1280px) 1160px, calc(93.75vw - 21px)"
-          src="{{{publish element="Media Library Image" output="normal" formatter="v10/image/pxl-crop" cdn="true" pxl-filter-id="43"}}}"
-          srcset="
-            {{{publish element="Media Library Image" output="normal" formatter="v10/image/pxl-crop" cdn="true" pxl-filter-id="43"}}} 500w,
-            {{{publish element="Media Library Image" output="normal" formatter="v10/image/pxl-crop" cdn="true" pxl-filter-id="42"}}} 768w,
-            {{{publish element="Media Library Image" output="normal" formatter="v10/image/pxl-crop" cdn="true" pxl-filter-id="41"}}} 1160w"
-          alt="{{{publish element="Image Caption"}}}"
-          class="js-processed"
-        />
-        
+        {{embed layout="v10/text/news-image"}}
         {{#ifSet element="Image Caption"}}
-        <figcaption>
-          <blockquote>
-            {{{publish element="Image Caption"}}}
-          </blockquote>
-        </figcaption>
+          <figcaption>
+            <blockquote>
+              {{{publish element="Image Caption"}}}
+            </blockquote>
+          </figcaption>
         {{/ifSet}}
       </figure>
     </div>
