@@ -1,177 +1,168 @@
-{{! News Detail Hero Section }}
+```handlebars
+{{!-- News Detail Hero Section --}}
 <div class="hero--basic hero--news global-padding--15x bg--dark">
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
       <div class="cell auto">
         <div class="hero--basic__text text-margin-reset">
           <h1>
-            {{title}}
+            {{{publish element="Title"}}}
           </h1>
+          
+          {{#ifSet element="News Types"}}
           <div class="eyebrow">
-            <a href="{{newsTypesLink}}">
-              {{newsTypes}}
+            <a href="{{nav id="991" name="Link to News & Stories"}}">
+              {{{publish element="News Types" output="normal" display_field="value"}}}
             </a>
           </div>
+          {{/ifSet}}
 
-          <div
-            class="news--detail__details global-spacing--0x text-margin-reset"
-          >
-            {{#if author}}
-              <p><strong>Written by {{author}}</strong></p>
-            {{/if}}
+          <div class="news--detail__details global-spacing--0x text-margin-reset">
+            {{#ifSet element="Author"}}
             <p>
-              {{publishDate}}
+              <strong>Written by {{{publish element="Author"}}}</strong>
+            </p>
+            {{/ifSet}}
+            
+            <p>
+              {{{publish element="Publish Date" output="normal" date_format="EEEE, MMMM d, yyyy"}}}
             </p>
           </div>
 
-          {{{breadcrumbs}}}
+          {{nav id="1027" name="Breadcrumbs Fulltext"}}
         </div>
       </div>
     </div>
 
-    {{! Hero Image }}
-    {{#if heroImage}}
-      <div class="news--detail__hero-photo">
-        <figure class="aspect-ratio-frame" style="--aspect-ratio: 74/116">
-          <img
-            loading="eager"
-            sizes="(min-width: 1280px) 1160px, calc(93.75vw - 21px)"
-            src="{{heroImage.src}}"
-            srcset="
-            {{heroImage.srcset500}} 500w,
-            {{heroImage.srcset768}} 768w,
-            {{heroImage.srcset1160}} 1160w"
-            alt="{{heroImage.alt}}"
-            class="js-processed"
-          />
-          {{#if heroImage.caption}}
-            <figcaption>
-              <blockquote>{{heroImage.caption}}</blockquote>
-            </figcaption>
-          {{/if}}
-        </figure>
-      </div>
-    {{/if}}
+    {{#ifSet element="Media Library Image"}}
+    <div class="news--detail__hero-photo">
+      <figure class="aspect-ratio-frame" style="--aspect-ratio: 74/116">
+        <img 
+          loading="eager" 
+          sizes="(min-width: 1280px) 1160px, calc(93.75vw - 21px)"
+          src="{{{publish element="Media Library Image" output="normal" formatter="v10/image/pxl-crop" cdn="true" pxl-filter-id="43"}}}"
+          srcset="
+            {{{publish element="Media Library Image" output="normal" formatter="v10/image/pxl-crop" cdn="true" pxl-filter-id="43"}}} 500w,
+            {{{publish element="Media Library Image" output="normal" formatter="v10/image/pxl-crop" cdn="true" pxl-filter-id="42"}}} 768w,
+            {{{publish element="Media Library Image" output="normal" formatter="v10/image/pxl-crop" cdn="true" pxl-filter-id="41"}}} 1160w"
+          alt="{{{publish element="Image Caption"}}}"
+          class="js-processed"
+        />
+        
+        {{#ifSet element="Image Caption"}}
+        <figcaption>
+          <blockquote>
+            {{{publish element="Image Caption"}}}
+          </blockquote>
+        </figcaption>
+        {{/ifSet}}
+      </figure>
+    </div>
+    {{/ifSet}}
   </div>
 </div>
 
-{{! News Detail Body }}
+{{!-- News Detail Body --}}
 <div class="news--detail__body grid-container global-padding--10x">
   <div class="grid-x grid-margin-x">
     <div class="cell medium-8">
+      {{#ifSet element="Article Subhead"}}
       <div class="news--detail__summary text-margin-reset">
         <p class="intro-text">
-          {{subhead}}
+          {{{publish element="Article Subhead"}}}
         </p>
       </div>
+      {{/ifSet}}
+      
       <div class="global-spacing--5x">
         <div class="wysiwyg">
-          {{{articleContent}}}
+          {{{publish element="Story article" output="normal" modifiers="medialibrary,nav_sections"}}}
         </div>
       </div>
-      <div class="news--detail__details global-spacing--3x text-margin-reset">
-        {{! Optional additional details can be added here }}
-      </div>
-
-      {{! Tags Section }}
+      
       <div class="global-spacing--3x">
+        {{#ifSet element="News Topics"}}
         <div class="tags tags__links">
           <h2 class="tags__heading show-for-sr">Tags:</h2>
           <ul>
-            {{#each newsTags}}
-              <li><a href="{{this.link}}">{{this.name}}</a></li>
+            {{#each (selected element="News Topics")}}
+              <li>
+                <a href="{{nav id="991" name="Link to News & Stories"}}">{{value}}</a>
+              </li>
             {{/each}}
           </ul>
         </div>
+        {{/ifSet}}
       </div>
     </div>
-
-    {{! Sidebar Callout }}
+    
     <div class="cell medium-4">
-      {{#if callout}}
-        <article
-          class="callout text-margin-reset oho-animate oho-animate-single fade-in oho-animate--in"
-        >
-          <h2 class="h6">
-            {{callout.title}}
-          </h2>
+      {{#ifSet element="Callout Title"}}
+      <article class="callout text-margin-reset oho-animate oho-animate-single fade-in oho-animate--in">
+        <h2 class="h6">
+          {{{publish element="Callout Title"}}}
+        </h2>
 
-          <div class="global-spacing--2x">
-            <p>
-              {{callout.description}}
-            </p>
-          </div>
-          <div class="global-spacing--3x">
-            <a href="{{callout.ctaLink}}" class="btn">
-              {{callout.ctaTitle}}
-            </a>
-          </div>
-        </article>
-      {{/if}}
+        <div class="global-spacing--2x">
+          <p>
+            {{{publish element="Callout Description"}}}
+          </p>
+        </div>
+        
+        <div class="global-spacing--3x">
+          <a href="{{{publish element="Callout CTA Internal Link" output="linkurl" modifiers="nav_sections"}}}{{{publish element="Callout CTA External Link"}}}" class="btn">
+            {{{publish element="Callout CTA Title"}}}
+          </a>
+        </div>
+      </article>
+      {{/ifSet}}
     </div>
   </div>
 </div>
 
-{{! Related News Stories Section }}
-<section
-  class="related-news-stories-section global-padding--15x bg--dark bg--blue bg--gradient"
->
+{{#if (nav id="988" name="Related news in news fulltext")}}
+<section class="related-news-stories-section global-padding--15x bg--dark bg--blue bg--gradient">
   <div class="grid-container oho-animate-sequence oho-animate--in">
     <div class="grid-x grid-margin-x">
       <div class="cell large-9">
         <div class="section-heading--basic text-margin-reset">
-          <h2 class="oho-animate fade-in oho-animate--in">Similar News &amp;
-            Stories</h2>
+          <h2 class="oho-animate fade-in oho-animate--in">Similar News &amp; Stories</h2>
 
-          <div
-            class="section-heading__link global-spacing--2x oho-animate fade-in oho-animate--in"
-          >
-            <a href="{{similarNewsLink}}">More Similar News &amp; Stories</a>
+          <div class="section-heading__link global-spacing--2x oho-animate fade-in oho-animate--in">
+            <a href="{{#each (selected element="News Topics")}}{{nav id="991" name="Link to News & Stories"}}{{/each}}">
+              More Similar News &amp; Stories
+            </a>
           </div>
         </div>
       </div>
     </div>
 
     <ul class="grid-x grid-margin-x global-spacing--6x">
-      {{#each relatedNews}}
-        <li>
-          <article>
-            <h3>{{this.title}}</h3>
-            <p>{{this.summary}}</p>
-            <a href="{{this.link}}">Read More</a>
-          </article>
-        </li>
-      {{/each}}
+      {{nav id="988" name="Related news in news fulltext"}}
     </ul>
   </div>
 </section>
+{{/if}}
 
-{{! Contact Listing Section }}
-{{#if contactListing}}
-  <section class="contact-listing-section global-spacing--10x">
-    <div class="grid-container oho-animate-sequence oho-animate--in">
-      <div class="grid-x grid-margin-x">
-        <div class="cell large-9">
-          <div class="section-heading--basic text-margin-reset">
-            <h2 class="oho-animate fade-in oho-animate--in">Contact Listing</h2>
+{{#ifSet element="Faculty Tags"}}
+<section class="contact-listing-section global-spacing--10x">
+  <div class="grid-container oho-animate-sequence oho-animate--in">
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-9">
+        <div class="section-heading--basic text-margin-reset">
+          <h2 class="oho-animate fade-in oho-animate--in">Contact Listing</h2>
 
-            <div
-              class="section-heading__link global-spacing--2x oho-animate fade-in oho-animate--in"
-            >
-              <a href="{{contactDirectoryLink}}">Faculty and Staff Directory</a>
-            </div>
+          <div class="section-heading__link global-spacing--2x oho-animate fade-in oho-animate--in">
+            <a href="{{nav id="995" name="Faculty and Staff Bio Link to Home"}}">
+              Faculty and Staff Directory
+            </a>
           </div>
         </div>
       </div>
     </div>
-
-    {{#each contacts}}
-      <div class="contact-item">
-        <h3>{{this.name}}</h3>
-        <p>{{this.title}}</p>
-        <p>{{this.contact}}</p>
-      </div>
-    {{/each}}
-  </section>
-{{/if}}
+  </div>
+  
+  {{nav id="1016" name="Contact Listing Inside News Fulltext"}}
+</section>
+{{/ifSet}}
 ```
