@@ -95,25 +95,28 @@
     </div>
     
     <div class="cell medium-4">
-      {{#ifSet element="Callout Title"}}
-      <article class="callout text-margin-reset oho-animate oho-animate-single fade-in oho-animate--in">
-        <h2 class="h6">
-          {{{publish element="Callout Title"}}}
-        </h2>
+      {{#ifSet element="Callout Title" ~}}
+        <article class="callout text-margin-reset oho-animate oho-animate-single fade-in oho-animate--in">
+          <h2 class="h6">
+            {{{publish element="Callout Title"}}}
+          </h2>
 
-        <div class="global-spacing--2x">
-          <p>
-            {{{publish element="Callout Description"}}}
-          </p>
-        </div>
-        
-        <div class="global-spacing--3x">
-          <a href="{{{publish element="Callout CTA Internal Link" output="linkurl" modifiers="nav_sections"}}}{{{publish element="Callout CTA External Link"}}}" class="btn">
-            {{{publish element="Callout CTA Title"}}}
-          </a>
-        </div>
-      </article>
-      {{/ifSet}}
+          {{#ifSet element="Callout Description" ~}}
+            <div class="global-spacing--2x">
+              <p>
+                {{{publish element="Callout Description"}}}
+              </p>
+            </div>
+          {{~/ifSet}}
+          {{#ifSet element="Callout CTA Title" ~}}
+            <div class="global-spacing--3x">
+              <a href="{{#link element="Callout CTA Internal Link" }}{{linkUrl}}{{/link}}{{publish element="Callout CTA External Link"}}" class="btn">
+                {{publish element="Callout CTA Title"}}
+              </a>
+            </div>
+          {{/ifSet}}
+        </article>
+      {{~/ifSet}}
     </div>
   </div>
 </div>
