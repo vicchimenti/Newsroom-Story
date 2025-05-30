@@ -1,4 +1,3 @@
-```handlebars
 {{!-- News Detail Hero Section --}}
 <div class="hero--basic hero--news global-padding--15x bg--dark">
   <div class="grid-container">
@@ -10,7 +9,9 @@
           </h1>
           <div class="eyebrow">
             {{#ifSet element="News Types" ~}}
-              <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{value}}">{{value}}></a>
+                {{#each (selected element="News Types") ~}}
+                  <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{value}}">{{value}}</a>
+                {{/each}}
             {{~/ifSet}}
           </div>
           <div class="news--detail__details global-spacing--0x text-margin-reset">
