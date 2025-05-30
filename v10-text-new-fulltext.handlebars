@@ -13,20 +13,16 @@
               <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{value}}">{{value}}></a>
             {{/ifSet}}
           </div>
-          
-
           <div class="news--detail__details global-spacing--0x text-margin-reset">
             {{#ifSet element="Author"}}
-            <p>
-              <strong>Written by {{{publish element="Author"}}}</strong>
-            </p>
+              <p>
+                <strong>Written by {{{publish element="Author"}}}</strong>
+              </p>
             {{/ifSet}}
-            
             <p>
               {{dateFormat (dateElement element="Publish Date") "EEEE, MMMM d, yyyy"}}
             </p>
           </div>
-
           {{nav id="1027" name="Breadcrumbs Fulltext"}}
         </div>
       </div>
