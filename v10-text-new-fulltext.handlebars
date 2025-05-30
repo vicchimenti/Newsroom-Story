@@ -83,9 +83,9 @@
         <div class="tags tags__links">
           <h2 class="tags__heading show-for-sr">Tags:</h2>
           <ul>
-            {{#each (selected element="News Topics")}}
+            {{#each (selected element="News Topics") ~}}
               <li>
-                <a href="{{nav id="991" name="Link to News & Stories"}}">{{value}}</a>
+                <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{value}}">{{value}}</a>
               </li>
             {{/each}}
           </ul>
