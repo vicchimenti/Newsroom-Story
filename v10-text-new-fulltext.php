@@ -6,13 +6,13 @@
                 <h1>
                     <t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" />
                 </h1>
-                <?php if (!empty($newsTypes)) : ?>
-                    <div class="eyebrow">
+                <div class="eyebrow">
+                    <?php if (!empty($newsTypes)) : ?>
                         <a href="<?php tags_keys('<t4 type="content" name="News Types" output="normal" display_field="name" delimiter="|" />', '<t4 type="navigation" name="Link to News & Stories" id="991" />', 'newsTypes', '|'); ?>">
                             <t4 type="content" name="News Types" output="normal" display_field="value" modifiers="striptags,htmlentities" />
                         </a>
-                    </div>
-                <?php endif; ?>
+                    <?php endif; ?>
+                </div>
 
                 <div class="news--detail__details global-spacing--0x text-margin-reset">
                     <t4 type="content" name="Author" output="selective-output" process-format="true" format="<p><strong>Written by
