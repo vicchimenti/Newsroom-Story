@@ -99,7 +99,7 @@ Handlebars.registerHelper('urlify', function(value) {
           <ul>
             {{#each (selected element="News Topics") ~}}
               <li>
-                <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{value}}">{{value}}</a>
+                <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{urlify value}}">{{value}}</a> 
               </li>
             {{~/each}}
           </ul>
