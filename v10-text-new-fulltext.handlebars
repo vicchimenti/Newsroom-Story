@@ -123,9 +123,11 @@
           {{#ifSet element="News Types" ~}}
             <h2 class="oho-animate fade-in oho-animate--in">Similar News &amp; Stories</h2>
             <div class="section-heading__link global-spacing--2x oho-animate fade-in oho-animate--in">
-              <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{encodeUrlQuery value}}">
-                More Similar News &amp; Stories
-              </a>
+              {{#each (selected element="News Topics") ~}}
+                <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{encodeUrlQuery value}}">
+                  More Similar News &amp; Stories
+                </a>
+              {{~/each}}
             </div>
           {{~/ifSet}}
         </div>
