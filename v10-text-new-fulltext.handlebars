@@ -27,7 +27,12 @@ Handlebars.registerHelper('urlify', function(value) {
 </script>
 
 {{!-- Fulltext Layout --}}
-<div class="hero--basic hero--news {{#if (ifSet element="Media Library Image")}}global-padding--15x-ignore hero--news__photo{{else}}global-padding--15x{{/if}} bg--dark">
+{{#ifSet element="Media Library Image"}}
+  <div class="hero--basic hero--news global-padding--15x-ignore hero--news__photo bg--dark">
+{{else}}
+  <div class="hero--basic hero--news global-padding--15x bg--dark">
+{{/ifSet}}
+
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
       <div class="cell auto">
