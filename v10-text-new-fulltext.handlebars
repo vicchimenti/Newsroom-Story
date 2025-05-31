@@ -1,4 +1,32 @@
-{{!-- News Detail Hero Section --}}
+{{!-- News Detail Hero Fulltext --}}
+
+{{!-- Custom Helpers --}}
+<script>
+Handlebars.registerHelper('urlify', function(value) {
+  if (!value) return '';
+  
+  // Trim leading and trailing whitespace
+  value = value.trim();
+  
+  // Convert to lowercase
+  value = value.toLowerCase();
+  
+  // Replace internal whitespace with dashes
+  value = value.replace(/\s+/g, '-');
+  
+  // Remove special characters and replace with URL-safe equivalents
+  value = value.replace(/[&,]/g, '')  // Remove & and ,
+               .replace(/[^a-z0-9-]/g, '-')  // Replace any remaining special characters with dashes
+               .replace(/-+/g, '-');  // Replace multiple consecutive dashes with a single dash
+  
+  // Encode for URL
+  value = encodeURIComponent(value);
+  
+  return value;
+});
+</script>
+
+{{!-- Fulltext Layout --}}
 <div class="hero--basic hero--news global-padding--15x bg--dark">
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
