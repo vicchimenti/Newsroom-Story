@@ -17,7 +17,9 @@
           <div class="eyebrow">
             {{#ifSet element="News Types" ~}}
                 {{#each (selected element="News Types") ~}}
-                  <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{encodeUrlQuery value}}">{{value}}</a>
+                  {{#if @first}}
+                    <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{encodeUrlQuery value}}">{{value}}</a>
+                  {{/if}}
                 {{~/each}}
             {{~/ifSet}}
           </div>
