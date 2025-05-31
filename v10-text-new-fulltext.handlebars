@@ -1,31 +1,5 @@
 {{!-- News Detail Hero Fulltext --}}
 
-{{!-- Custom Helpers --}}
-<script>
-Handlebars.registerHelper('urlify', function(value) {
-  if (!value) return '';
-  
-  // Trim leading and trailing whitespace
-  value = value.trim();
-  
-  // Convert to lowercase
-  value = value.toLowerCase();
-  
-  // Replace internal whitespace with dashes
-  value = value.replace(/\s+/g, '-');
-  
-  // Remove special characters and replace with URL-safe equivalents
-  value = value.replace(/[&,]/g, '')  // Remove & and ,
-               .replace(/[^a-z0-9-]/g, '-')  // Replace any remaining special characters with dashes
-               .replace(/-+/g, '-');  // Replace multiple consecutive dashes with a single dash
-  
-  // Encode for URL
-  value = encodeURIComponent(value);
-  
-  return value;
-});
-</script>
-
 {{!-- Check for Image --}}
 {{#ifSet element="Media Library Image"}}
   <div class="hero--basic hero--news global-padding--15x-ignore hero--news__photo bg--dark">
@@ -43,7 +17,7 @@ Handlebars.registerHelper('urlify', function(value) {
           <div class="eyebrow">
             {{#ifSet element="News Types" ~}}
                 {{#each (selected element="News Types") ~}}
-                  <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{urlify value}}">{{value}}</a>
+                  <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{encodeUrl value}}">{{value}}</a>
                 {{~/each}}
             {{~/ifSet}}
           </div>
@@ -104,7 +78,7 @@ Handlebars.registerHelper('urlify', function(value) {
           <ul>
             {{#each (selected element="News Topics") ~}}
               <li>
-                <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{urlify value}}">{{value}}</a> 
+                <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{encodeUrl value}}">{{value}}</a> 
               </li>
             {{~/each}}
           </ul>
