@@ -38,7 +38,7 @@ Handlebars.registerHelper('urlify', function(value) {
           <div class="eyebrow">
             {{#ifSet element="News Types" ~}}
                 {{#each (selected element="News Types") ~}}
-                  <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{value}}">{{value}}</a>
+                  <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{urlify value}}">{{value}}</a>
                 {{~/each}}
             {{~/ifSet}}
           </div>
