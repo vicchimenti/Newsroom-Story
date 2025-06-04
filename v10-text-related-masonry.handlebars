@@ -4,14 +4,12 @@
     <div class="news-story__text text-margin-reset">
       <h3 class="h5 funderline">{{fulltext linkText=(publish element="Title")}}</h3>
       {{#ifSet element="News Types" ~}}
-      <div class="eyebrow">
-        {{selectedValues element="News Types"}}
-      </div>
+        <div class="eyebrow">
+          {{selectedValues element="News Types"}}
+        </div>
       {{~/ifSet}}
-
-      <div class="eyebrow"><t4 type="content" name="News Types" output="normal" display_field="value" /></div>
       <div class="global-spacing--2x">
-        <t4 type="content" name="Article Subhead" output="normal" modifiers="striptags,htmlentities" />
+        {{{publish element="Article Subhead"}}}
       </div>
     </div>
   </article>
