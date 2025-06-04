@@ -2,7 +2,7 @@
 	<article class="news-story--item">
         {{embed layout="v10/text/masonry-image"}}
     <div class="news-story__text text-margin-reset">
-      <h3 class="h5 funderline">{{fulltext linkText=(publish element="Title")}}</h3>
+      <h3 class="h5 funderline">{{{fulltext linkText=(publish element="Title")}}}</h3>
       {{#ifSet element="News Types" ~}}
         <div class="eyebrow">
           {{selectedValues element="News Types"}}
