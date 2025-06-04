@@ -3,6 +3,9 @@
         {{embed layout="v10/text/masonry-image"}}
     <div class="news-story__text text-margin-reset">
       <h3 class="h5 funderline"><a href="<t4 type="content" name="Title" output="fulltext" use-element="true" filename-element="Title" modifiers="striptags,htmlentities" />"><t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" /></a></h3>
+      
+      <h3 class="h5 funderline">{{fulltext linkText=(publish element="Title")}}</h3>
+
       <div class="eyebrow"><t4 type="content" name="News Types" output="normal" display_field="value" /></div>
       <div class="global-spacing--2x">
         <t4 type="content" name="Article Subhead" output="normal" modifiers="striptags,htmlentities" />
