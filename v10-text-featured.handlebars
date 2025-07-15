@@ -1,0 +1,68 @@
+{{!-- News Event Lockup --}}
+<article class="news-event-lockup">
+  <div class="grid-container oho-animate-sequence">
+    <div class="grid-x grid-margin-x">
+      {{#ifSet element="Media Library Image"}}
+      <div class="cell medium-7">
+        <figure class="aspect-ratio-frame oho-animate fade-in" style="--aspect-ratio: 56/76">
+          <img 
+            loading="eager" 
+            sizes="(min-width: 1460px) 760px, (min-width: 780px) 52.27vw, calc(100vw - 40px)" 
+            src="{{image element="Media Library Image" filter="47"}}"
+            srcset="
+              {{image element="Media Library Image" filter="47"}} 500w,
+              {{image element="Media Library Image" filter="46"}} 768w"
+            alt="{{publish element="Media Library Image" attribute="alt"}}"
+            class="js-processed"
+          >
+        </figure>
+      </div>
+      {{/ifSet}}
+      
+      <div class="cell medium-5">
+        <div class="news-event-lockup--text text-margin-reset oho-animate fade-in-right">
+          <h3 class="funderline">
+            <a href="{{publish element="Title" attribute="link"}}">
+              {{publish element="Title"}}
+            </a>
+          </h3>
+          
+          {{#ifSet element="News Types"}}
+          <div class="eyebrow">
+            {{#each (selected element="News Types")}}
+              {{#if @first}}
+                <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{encodeUrlQuery value}}">
+                  {{value}}
+                </a>
+              {{/if}}
+            {{/each}}
+          </div>
+          {{/ifSet}}
+          
+          {{#ifSet element="Article Subhead"}}
+          <div class="global-spacing--2x">
+            <p>{{publish element="Article Subhead"}}</p>
+          </div>
+          {{/ifSet}}
+          
+          {{#ifSet element="News Topics"}}
+          <div class="global-spacing--3x">
+            <div class="tags tags__links">
+              <h4 class="tags__heading show-for-sr">Tags:</h4>
+              <ul>
+                {{#each (selected element="News Topics")}}
+                  <li>
+                    <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{encodeUrlQuery value}}">
+                      {{value}}
+                    </a>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+          {{/ifSet}}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
