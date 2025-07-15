@@ -4,7 +4,8 @@
     <div class="grid-x grid-margin-x">
       <div class="cell medium-7">
         {{#ifSet element="Media Library Image"}}
-        <figure class="aspect-ratio-frame oho-animate fade-in" style="--aspect-ratio: 56/76">
+          <figure class="aspect-ratio-frame oho-animate fade-in" style="--aspect-ratio: 56/76">
+
           <img 
             loading="eager" 
             sizes="(min-width: 1460px) 760px, (min-width: 780px) 52.27vw, calc(100vw - 40px)" 
@@ -13,9 +14,10 @@
               {{image element="Media Library Image" filter="47"}} 500w,
               {{image element="Media Library Image" filter="46"}} 768w"
             alt="{{publish element="Media Library Image" attribute="alt"}}"
-            class="js-processed"
-          >
-        </figure>
+            class="js-processed">
+
+            
+          </figure>
         {{/ifSet}}
       </div>
       
