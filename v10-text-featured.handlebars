@@ -33,24 +33,22 @@
               <p>{{publish element="Article Subhead"}}</p>
             {{/ifSet}}
           </div>
- 
-          
-          {{#ifSet element="News Topics"}}
           <div class="global-spacing--3x">
             <div class="tags tags__links">
-              <h4 class="tags__heading show-for-sr">Tags:</h4>
-              <ul>
-                {{#each (selected element="News Topics")}}
-                  <li>
-                    <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{encodeUrlQuery value}}">
-                      {{value}}
-                    </a>
-                  </li>
-                {{/each}}
-              </ul>
+              {{#ifSet element="News Topics"}}
+                <h4 class="tags__heading show-for-sr">Tags:</h4>
+                <ul>
+                  {{#each (selected element="News Topics")}}
+                    <li>
+                      <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{encodeUrlQuery value}}">
+                        {{value}}
+                      </a>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/ifSet}}
             </div>
           </div>
-          {{/ifSet}}
         </div>
       </div>
     </div>
