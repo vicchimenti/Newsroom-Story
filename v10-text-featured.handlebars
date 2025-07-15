@@ -2,8 +2,8 @@
 <article class="news-event-lockup">
   <div class="grid-container oho-animate-sequence">
     <div class="grid-x grid-margin-x">
-      {{#ifSet element="Media Library Image"}}
       <div class="cell medium-7">
+        {{#ifSet element="Media Library Image"}}
         <figure class="aspect-ratio-frame oho-animate fade-in" style="--aspect-ratio: 56/76">
           <img 
             loading="eager" 
@@ -16,8 +16,9 @@
             class="js-processed"
           >
         </figure>
+        {{/ifSet}}
       </div>
-      {{/ifSet}}
+      
       
       <div class="cell medium-5">
         <div class="news-event-lockup--text text-margin-reset oho-animate fade-in-right">
