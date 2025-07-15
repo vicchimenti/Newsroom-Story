@@ -34,20 +34,18 @@
             {{/ifSet}}
           </div>
           <div class="global-spacing--3x">
-            <div class="tags tags__links">
-              {{#ifSet element="News Topics"}}
+            {{#ifSet element="News Topics" ~}}
+              <div class="tags tags__links">
                 <h4 class="tags__heading show-for-sr">Tags:</h4>
                 <ul>
-                  {{#each (selected element="News Topics")}}
+                  {{#each (selected element="News Topics") ~}}
                     <li>
-                      <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{encodeUrlQuery value}}">
-                        {{value}}
-                      </a>
+                      <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{encodeUrlQuery value}}">{{value}}</a>
                     </li>
-                  {{/each}}
+                  {{~/each}}
                 </ul>
-              {{/ifSet}}
-            </div>
+              </div>
+            {{~/ifSet}}
           </div>
         </div>
       </div>
