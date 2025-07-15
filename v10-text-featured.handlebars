@@ -28,13 +28,12 @@
                 {{~/each}}
             {{~/ifSet}}
           </div>
-
-          
-          {{#ifSet element="Article Subhead"}}
           <div class="global-spacing--2x">
-            <p>{{publish element="Article Subhead"}}</p>
+            {{#ifSet element="Article Subhead"}}
+              <p>{{publish element="Article Subhead"}}</p>
+            {{/ifSet}}
           </div>
-          {{/ifSet}}
+ 
           
           {{#ifSet element="News Topics"}}
           <div class="global-spacing--3x">
