@@ -5,18 +5,18 @@
       <div class="cell medium-7">
         {{#ifSet element="Media Library Image"}}
           <figure class="aspect-ratio-frame oho-animate fade-in" style="--aspect-ratio: 56/76">
+            {{embed layout="v10/text/featured/image"}}
+            {{#ifSet element="Image Caption"}}
+              <figcaption>
+                <blockquote>
+                  {{{publish element="Image Caption"}}}
+                </blockquote>
+              </figcaption>
+            {{/ifSet}}
 
-          <img 
-            loading="eager" 
-            sizes="(min-width: 1460px) 760px, (min-width: 780px) 52.27vw, calc(100vw - 40px)" 
-            src="{{image element="Media Library Image" filter="47"}}"
-            srcset="
-              {{image element="Media Library Image" filter="47"}} 500w,
-              {{image element="Media Library Image" filter="46"}} 768w"
-            alt="{{publish element="Media Library Image" attribute="alt"}}"
-            class="js-processed">
 
-            
+
+
           </figure>
         {{/ifSet}}
       </div>
