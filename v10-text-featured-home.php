@@ -15,14 +15,6 @@
           <div class="global-spacing--2x">
             <p><t4 type="content" name="Article Subhead" output="normal" modifiers="striptags,htmlentities" /></p>
           </div>
-          <div class="global-spacing--3x">
-            <div class="tags tags__links">
-              <h4 class="tags__heading show-for-sr">Tags:</h4>
-              <ul>                
-                <li><?php tags_list('<t4 type="content" name="News Topics" output="normal" display_field="name" />', '<t4 type="navigation" name="Link to News & Stories" id="991" delimiter="|"/>', 'newsTopics', '|'); ?></li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </div>
