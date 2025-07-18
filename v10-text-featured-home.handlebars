@@ -1,0 +1,54 @@
+{{!-- Featured News Hero Story --}}
+<article class="news-event-lockup global-spacing--8x">
+  <div class="grid-container oho-animate-sequence oho-animate--in">
+    <div class="grid-x grid-margin-x">
+      <div class="cell medium-7">
+        {{#ifSet element="Media Library Image"}}
+          <figure class="aspect-ratio-frame oho-animate fade-in" style="--aspect-ratio: 56/76">
+            {{embed layout="v10/text/featured/image"}}
+            {{#ifSet element="Image Caption"}}
+              <figcaption>
+                <blockquote>
+                  {{{publish element="Image Caption"}}}
+                </blockquote>
+              </figcaption>
+            {{/ifSet}}
+          </figure>
+        {{/ifSet}}
+      </div>
+      <div class="cell medium-5">
+        <div class="news-event-lockup--text text-margin-reset oho-animate fade-in-right">
+          <h3 class="funderline">{{{fulltext linkText=(publish element="Title")}}}</h3>
+          <div class="eyebrow">
+            {{#ifSet element="News Types" ~}}
+                {{#each (selected element="News Types") ~}}
+                  {{#if @first}}
+                    <a href="{{nav id="991" name="Link to News & Stories"}}?newsTypes={{encodeUrlQuery value}}">{{value}}</a>
+                  {{/if}}
+                {{~/each}}
+            {{~/ifSet}}
+          </div>
+          <div class="global-spacing--2x">
+            {{#ifSet element="Article Subhead"}}
+              <p>{{publish element="Article Subhead"}}</p>
+            {{/ifSet}}
+          </div>
+          <div class="global-spacing--3x">
+            {{#ifSet element="News Topics" ~}}
+              <div class="tags tags__links">
+                <h4 class="tags__heading show-for-sr">Tags:</h4>
+                <ul>
+                  {{#each (selected element="News Topics") ~}}
+                    <li>
+                      <a href="{{nav id="991" name="Link to News & Stories"}}?newsTopics={{encodeUrlQuery value}}">{{value}}</a>
+                    </li>
+                  {{~/each}}
+                </ul>
+              </div>
+            {{~/ifSet}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
