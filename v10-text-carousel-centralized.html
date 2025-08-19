@@ -1,0 +1,22 @@
+<li class="swiper-slide oho-animate fade-in-up">
+  <article class="news-story--item">
+    <t4 type="content" name="Media Library Image" output="selective-output" process-format="true" format="<figure class=&quot;aspect-ratio-frame&quot; style=&quot;--aspect-ratio: 24/38&quot;>
+      <img src=&quot;<t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;v10/image/pxl-crop&quot; cdn=&quot;true&quot; pxl-filter-id=&quot;63&quot; />&quot; alt=&quot;<t4 type=&quot;content&quot; name=&quot;Media Library Image&quot; output=&quot;normal&quot; formatter=&quot;text/alt&quot; />&quot; class=&quot;js-processed&quot;>
+    </figure>" formatter="path/*" />
+    <div class="news-story__text text-margin-reset">
+      <h3 class="h5 funderline"><a href="<t4 type="content" name="Title" output="fulltext" use-element="true" filename-element="Title" modifiers="striptags,htmlentities" />"><t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" /></a></h3>
+      <div class="eyebrow"><t4 type="content" name="News Types" output="normal" display_field="value" /></div>
+      <div class="global-spacing--2x">
+        <t4 type="content" name="Article Subhead" output="normal" modifiers="striptags,htmlentities" />
+      </div>
+      <div class="global-spacing--3x">
+        <div class="tags tags__links">
+          <h4 class="tags__heading show-for-sr">Tags:</h4>
+          <ul> 
+              <?php tags_list('<t4 type="content" name="News Topics" output="normal" display_field="name" delimiter="|" />', '<t4 type="navigation" name="Link to News & Stories" id="991" />', 'newsTopics', '|'); ?> 
+          </ul>
+      </div>
+      </div>
+    </div>
+  </article>
+</li>
