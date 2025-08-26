@@ -14,9 +14,11 @@
           {{/if}}
         {{/if}}
       {{/ifSet}}
-      <div class="global-spacing--2x">
-        {{publish element="Article Subhead"}}
-      </div>
+      {{#ifSet element="Article Subhead" ~}}
+        <div class="global-spacing--2x">
+          {{publish element="Article Subhead"}}
+        </div>
+      {{/ifSet}}
     </div>
   </article>
 </li>
