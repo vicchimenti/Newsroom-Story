@@ -1,61 +1,59 @@
 {{!-- News Carousel Central News ID: 8064 --}}
 <section class="news-section legendary-styles global-padding--10x bg--dark bg--blue">
-  {{#if htmlAnchor}}
-    <div id="{{htmlAnchor}}"></div>
-  {{/if}}
+    {{anchor}}
   
-  <div class="grid-container oho-animate-sequence">
-    <div class="grid-x grid-margin-x">
-      <div class="cell large-9">
-        <div class="section-heading--basic text-margin-reset">
-
-          {{#if heading}}
-            <h2 class="oho-animate fade-in">{{heading}}</h2>
-          {{/if}}
-
-          {{#if description}}
-            <div class="global-spacing--2x oho-animate fade-in">
-              <p>{{{description}}}</p>
-            </div>
-          {{/if}}
-
-          {{#if primaryTopic}}
-            <div class="section-heading__link global-spacing--2x oho-animate fade-in">
-              <a href="{{newsStoriesLink}}?newsTopics={{urlEncode (lowercase primaryTopic.value)}}">
-                More Similar News &amp; Stories
-              </a>
-            </div>
-          {{/if}}
-
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="news-section--swiper global-spacing--6x">
     <div class="grid-container oho-animate-sequence">
-      <div class="swiper-container">
-        <ul class="swiper-wrapper">
-          {{#each newsItems}}
-            <li class="swiper-slide">
-              {{> newsCarouselItem this}}
-            </li>
-          {{/each}}
-        </ul>
-        <div class="slider-navigation">
+        <div class="grid-x grid-margin-x">
+        <div class="cell large-9">
+            <div class="section-heading--basic text-margin-reset">
 
-          <button class="slider-navigation__prev">
-            <i class="far fa-chevron-left" aria-hidden="true"></i>
-            <span class="show-for-sr">Go to the previous slide.</span>
-          </button>
+            {{#if heading}}
+                <h2 class="oho-animate fade-in">{{heading}}</h2>
+            {{/if}}
 
-          <button class="slider-navigation__next">
-            <i class="far fa-chevron-right" aria-hidden="true"></i>
-            <span class="show-for-sr">Go to the next slide.</span>
-          </button>
+            {{#if description}}
+                <div class="global-spacing--2x oho-animate fade-in">
+                <p>{{{description}}}</p>
+                </div>
+            {{/if}}
 
+            {{#if primaryTopic}}
+                <div class="section-heading__link global-spacing--2x oho-animate fade-in">
+                <a href="{{newsStoriesLink}}?newsTopics={{urlEncode (lowercase primaryTopic.value)}}">
+                    More Similar News &amp; Stories
+                </a>
+                </div>
+            {{/if}}
+
+            </div>
         </div>
-      </div>
+        </div>
     </div>
-  </div>
+    
+    <div class="news-section--swiper global-spacing--6x">
+        <div class="grid-container oho-animate-sequence">
+        <div class="swiper-container">
+            <ul class="swiper-wrapper">
+            {{#each newsItems}}
+                <li class="swiper-slide">
+                {{> newsCarouselItem this}}
+                </li>
+            {{/each}}
+            </ul>
+            <div class="slider-navigation">
+
+            <button class="slider-navigation__prev">
+                <i class="far fa-chevron-left" aria-hidden="true"></i>
+                <span class="show-for-sr">Go to the previous slide.</span>
+            </button>
+
+            <button class="slider-navigation__next">
+                <i class="far fa-chevron-right" aria-hidden="true"></i>
+                <span class="show-for-sr">Go to the next slide.</span>
+            </button>
+
+            </div>
+        </div>
+        </div>
+    </div>
 </section>
