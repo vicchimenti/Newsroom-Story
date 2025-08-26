@@ -9,7 +9,9 @@
       <h3 class="h5 funderline">{{{fulltext linkText=(publish element="Title")}}}</h3>
       {{#ifSet element="News Types" ~}}
         {{#if @first}}
-          <div class="eyebrow">{{publish element="News Types" display_field="value"}}</div>
+          {{#if selected}}
+            <div class="eyebrow">{{publish element="News Types" display_field="value"}}</div>
+          {{/if}}
         {{/if}}
       {{/ifSet}}
       <div class="global-spacing--2x">
