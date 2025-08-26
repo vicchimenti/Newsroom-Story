@@ -3,7 +3,7 @@
   <article class="news-story--item">
     {{#ifSet element="Media Library Image"}}
       <figure class="aspect-ratio-frame" style="--aspect-ratio: 24/38">
-        {{{media id=(mediaId element="Media element") layout="v10/image/pxl-crop" pxl-filter-id="63"}}}
+        {{embed layout="v10/text/carousel/centralized-image"}}
       </figure>
     {{/ifSet}}
     <div class="news-story__text text-margin-reset">
