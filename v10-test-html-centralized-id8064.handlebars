@@ -34,28 +34,20 @@
     
     <div class="news-section--swiper global-spacing--6x">
         <div class="grid-container oho-animate-sequence">
-        <div class="swiper-container">
-            <ul class="swiper-wrapper">
-            {{#each newsItems}}
-                <li class="swiper-slide">
-                {{> newsCarouselItem this}}
-                </li>
-            {{/each}}
-            </ul>
-            <div class="slider-navigation">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    {{nav id="1117" name="News Carousel Centralized"}}               
+                </ul>
+                <div class="slider-navigation">
 
-            <button class="slider-navigation__prev">
-                <i class="far fa-chevron-left" aria-hidden="true"></i>
-                <span class="show-for-sr">Go to the previous slide.</span>
-            </button>
+                    <button class="slider-navigation__prev"><i class="far fa-chevron-left" aria-hidden="true"></i><span
+                        class="show-for-sr">Go to the previous slide.</span></button>
 
-            <button class="slider-navigation__next">
-                <i class="far fa-chevron-right" aria-hidden="true"></i>
-                <span class="show-for-sr">Go to the next slide.</span>
-            </button>
+                    <button class="slider-navigation__next"><i class="far fa-chevron-right" aria-hidden="true"></i><span
+                        class="show-for-sr">Go to the next slide.</span></button>
 
+                </div>
             </div>
-        </div>
         </div>
     </div>
 </section>
