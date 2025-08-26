@@ -11,19 +11,19 @@
                 <h2 class="oho-animate fade-in">{{publish element="Heading"}}</h2>
             {{/if}}
 
-            {{#if description}}
+            {{#ifSet element="Description"}}
                 <div class="global-spacing--2x oho-animate fade-in">
-                <p>{{{description}}}</p>
+                    <p>{{{publish element="Description"}}}</p>
                 </div>
-            {{/if}}
+            {{/ifSet}}
 
-            {{#if primaryTopic}}
+            {{#ifSet element="Primary Topic"}}
                 <div class="section-heading__link global-spacing--2x oho-animate fade-in">
                 <a href="{{newsStoriesLink}}?newsTopics={{urlEncode (lowercase primaryTopic.value)}}">
                     More Similar News &amp; Stories
                 </a>
                 </div>
-            {{/if}}
+            {{/ifSet}}
 
             </div>
         </div>
