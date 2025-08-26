@@ -9,9 +9,11 @@
     <div class="news-story__text text-margin-reset">
       <h3 class="h5 funderline">{{{fulltext linkText=(publish element="Title")}}}</h3>
       {{#ifSet element="News Types" ~}}
-        {{#if @first}}
-          {{#if selected}}<div class="eyebrow">{{/if}}{{value}}{{#if selected}}</div>{{/if}}
-        {{/if}}
+        {{#each (selected element="News Types") ~}}
+          {{#if @first}}
+            <div class="eyebrow">{{value}}</div>
+          {{/if}}
+        {{~/each}}
       {{/ifSet}}
       {{#ifSet element="Article Subhead" ~}}
         <div class="global-spacing--2x">
