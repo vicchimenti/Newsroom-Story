@@ -1,13 +1,15 @@
-<li class="swiper-slide oho-animate fade-in-up">
+<li class="swiper-slide oho-animate fade-in-up centralized">
   <article class="news-story--item">
     {{#ifSet element="Media Library Image"}}
       <figure class="aspect-ratio-frame" style="--aspect-ratio: 24/38">
-        <img src="{{publish element="Media Library Image" formatter="v10/image/pxl-crop" cdn="true" pxl-filter-id="63"}}" alt="{{publish element="Media Library Image" formatter="text/alt"}}" class="js-processed">
+        {{{media id=(mediaId element="Media element") layout="v10/image/pxl-crop" pxl-filter-id="63"}}}
       </figure>
     {{/ifSet}}
     <div class="news-story__text text-margin-reset">
-      <h3 class="h5 funderline"><a href="{{publish element="Title" output="fulltext" use-element="true" filename-element="Title"}}">{{publish element="Title"}}</a></h3>
-      <div class="eyebrow">{{publish element="News Types" display_field="value"}}</div>
+      <h3 class="h5 funderline">{{{fulltext linkText=(publish element="Title")}}}</h3>
+      {{#ifSet element="News Types" ~}}
+        <div class="eyebrow">{{publish element="News Types" display_field="value"}}</div>
+      {{/ifSet}}
       <div class="global-spacing--2x">
         {{publish element="Article Subhead"}}
       </div>
