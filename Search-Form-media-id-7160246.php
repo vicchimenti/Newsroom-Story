@@ -7,6 +7,24 @@ $dateFilters = array();
 $rangeFilters = array();
 $i = 0;
 ?>
+
+<?php
+// Helper: true if "Legendary" is among the item's topics (case-insensitive).
+function itemHasLegendary($value): bool {
+  if (is_array($value)) {
+    $topics = $value;
+  } else {
+    // Your code sets: multipleValueSeparator = '|'
+    // Split on | (and also handle , ; defensively)
+    $topics = preg_split('/\s*[|,;]\s*/', (string)$value, -1, PREG_SPLIT_NO_EMPTY) ?: [(string)$value];
+  }
+  foreach ($topics as $t) {
+    if (strcasecmp(trim($t), 'Legendary') === 0) return true;
+  }
+  return false;
+}
+
+
 <section class="su-listing">
     <div id="searchoptionsGeneric" role="search" class="su-listing--form-wrapper bg--dark global-padding--8x" data-t4-ajax-group="courseSearch">
 
