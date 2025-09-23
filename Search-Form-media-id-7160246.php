@@ -7,25 +7,6 @@ $dateFilters = array();
 $rangeFilters = array();
 $i = 0;
 ?>
-
-<?php
-
-// Helper: true if "Legendary" is among the item's topics (case-insensitive).
-function itemHasLegendary($value): bool {
-  if (is_array($value)) {
-    $topics = $value;
-  } else {
-    // Split on | (and also handle , ; defensively)
-    $topics = preg_split('/\s*[|,;]\s*/', (string)$value, -1, PREG_SPLIT_NO_EMPTY) ?: [(string)$value];
-  }
-  foreach ($topics as $t) {
-    if (strcasecmp(trim($t), 'Legendary') === 0) return true;
-  }
-  return false;
-}
-
-?>
-
 <section class="su-listing">
     <div id="searchoptionsGeneric" role="search" class="su-listing--form-wrapper bg--dark global-padding--8x" data-t4-ajax-group="courseSearch">
 
@@ -55,16 +36,7 @@ function itemHasLegendary($value): bool {
           <select id="<?php echo $element; ?>" name="<?php echo $element; ?>" data-cookie="T4_persona">
             <option value="">All Topics</option>
             <?php foreach ($search as $item) : ?>
-              <?php
-                // NEW: skip any option that has the "Legendary" taxonomy
-                if (isset($item['value']) && itemHasLegendary($item['value'])) {
-                  continue;
-                }
-              ?>
-              <option value="<?php echo strtolower($item['value']); ?>"
-                      <?php echo !empty($item['selected']) ? 'selected' : '' ?>>
-                <?php echo $item['value']; ?>
-              </option>
+              <option value="<?php echo strtolower($item['value']); ?>" <?php echo $item['selected'] ? 'selected' : '' ?>><?php echo $item['value']; ?></option>
             <?php endforeach; ?>
           </select>
         <?php endif; ?>
