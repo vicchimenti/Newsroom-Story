@@ -7,24 +7,6 @@ $dateFilters = array();
 $rangeFilters = array();
 $i = 0;
 ?>
-<?php
-if (!function_exists('itemHasLegendary')) {
-  function itemHasLegendary($value): bool {
-    // Handle array or delimited string (your facet uses '|' as the multi-value separator)
-    if (is_array($value)) {
-      $topics = $value;
-    } else {
-      $topics = preg_split('/\s*[|,;]\s*/', (string)$value, -1, PREG_SPLIT_NO_EMPTY) ?: [(string)$value];
-    }
-    foreach ($topics as $t) {
-      if (strcasecmp(trim($t), 'Legendary') === 0) {
-        return true;
-      }
-    }
-    return false;
-  }
-}
-?>
 <section class="su-listing">
     <div id="searchoptionsGeneric" role="search" class="su-listing--form-wrapper bg--dark global-padding--8x" data-t4-ajax-group="courseSearch">
 
@@ -54,10 +36,7 @@ if (!function_exists('itemHasLegendary')) {
           <select id="<?php echo $element; ?>" name="<?php echo $element; ?>" data-cookie="T4_persona">
             <option value="">All Topics</option>
             <?php foreach ($search as $item) : ?>
-              <?php if (isset($item['value']) && itemHasLegendary($item['value'])) continue; ?>
-              <option value="<?php echo strtolower($item['value']); ?>" <?php echo !empty($item['selected']) ? 'selected' : '' ?>>
-                <?php echo $item['value']; ?>
-              </option>
+              <option value="<?php echo strtolower($item['value']); ?>" <?php echo $item['selected'] ? 'selected' : '' ?>><?php echo $item['value']; ?></option>
             <?php endforeach; ?>
           </select>
         <?php endif; ?>
