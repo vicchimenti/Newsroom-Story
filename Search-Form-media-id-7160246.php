@@ -54,7 +54,16 @@ function itemHasLegendary($value): bool {
           <select id="<?php echo $element; ?>" name="<?php echo $element; ?>" data-cookie="T4_persona">
             <option value="">All Topics</option>
             <?php foreach ($search as $item) : ?>
-              <option value="<?php echo strtolower($item['value']); ?>" <?php echo $item['selected'] ? 'selected' : '' ?>><?php echo $item['value']; ?></option>
+              <?php
+                // NEW: skip any option that has the "Legendary" taxonomy
+                if (isset($item['value']) && itemHasLegendary($item['value'])) {
+                  continue;
+                }
+              ?>
+              <option value="<?php echo strtolower($item['value']); ?>"
+                      <?php echo !empty($item['selected']) ? 'selected' : '' ?>>
+                <?php echo $item['value']; ?>
+              </option>
             <?php endforeach; ?>
           </select>
         <?php endif; ?>
