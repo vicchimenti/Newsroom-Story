@@ -1,5 +1,4 @@
 try {
-    //Defining main functions
     function processTags(t4Tag) {
       myContent = content || null;
       return String(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, myContent, language, isPreview, t4Tag));
@@ -15,17 +14,14 @@ try {
 
     function hasLegendary(topics) {
       if (!topics) return false;
-      return String(topics)
-        .split('|')
-        .some(function (t) {
-          return t.trim().toLowerCase() === 'legendary';
-        });
+      return String(topics).split('|').some(function (t) {
+        return t.trim().toLowerCase() === 'legendary';
+      });
     }
-  
+
     var list = {};
     var topics = processTags('<t4 type="content" name="News Topics" output="normal" display_field="name" delimiter="|" />');
 
-    list['newsTopics'] = hasLegendary(topics) ? '' : topics;
     list['title'] = processTags('<t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" />').replace(/&/gi,'&amp;');
     list['articleSubhead'] = processTags('<t4 type="content" name="Article Subhead" output="normal" modifiers="striptags,htmlentities" />').replace(/&/gi,'&amp;');
     list['newsTypes'] = processTags('<t4 type="content" name="News Types" output="normal" display_field="name" delimiter="|" />');
@@ -36,8 +32,12 @@ try {
     list['publishDateText'] = processTags('<t4 type="content" name="Publish Date" output="normal" date_format="MMMM d, yyyy" />');
     list['image'] = processTags('<t4 type="content" name="Media Library Image" output="normal" formatter="v10/image/pxl-crop" cdn="true" pxl-filter-id="64" />');
     list['url'] = processTags('<t4 type="content" name="Title" output="fulltext" use-element="true" filename-element="Title" modifiers="striptags,htmlentities" />');
-    var jsonObj = new org.json.JSONObject(list);
-    document.write(jsonObj.toString() + ',');
+    
+    if (!hasLegendary(topics)) {
+      list['newsTopics'] = topics;             
+      var jsonObj = new org.json.JSONObject(list);
+      document.write(jsonObj.toString() + ','); 
+    }
   
   } catch (err) {
     document.write(err);
