@@ -12,6 +12,7 @@ try {
       return processTags(formatString);
     }
 
+    var __newsFeedWrote = (typeof __newsFeedWrote !== 'undefined') ? __newsFeedWrote : false;
     function hasLegendary(topics) {
       if (!topics) return false;
       return String(topics).split('|').some(function (t) {
