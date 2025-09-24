@@ -25,7 +25,7 @@ try {
     var list = {};
     var topics = processTags('<t4 type="content" name="News Topics" output="normal" display_field="name" delimiter="|" />');
 
-    list['newsTopics'] = hasLegendary(topics) ? null : topics;
+    list['newsTopics'] = hasLegendary(topics) ? '' : topics;
     list['title'] = processTags('<t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" />').replace(/&/gi,'&amp;');
     list['articleSubhead'] = processTags('<t4 type="content" name="Article Subhead" output="normal" modifiers="striptags,htmlentities" />').replace(/&/gi,'&amp;');
     list['newsTypes'] = processTags('<t4 type="content" name="News Types" output="normal" display_field="name" delimiter="|" />');
