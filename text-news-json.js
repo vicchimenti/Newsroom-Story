@@ -12,14 +12,23 @@ try {
       formatString = format.getFormatting();
       return processTags(formatString);
     }
+
+    function hasLegendary(topics) {
+      if (!topics) return false;
+      return String(topics)
+        .split('|')
+        .some(function (t) {
+          return t.trim().toLowerCase() === 'legendary';
+        });
+    }
   
     var list = {};
+    var topics = processTags('<t4 type="content" name="News Topics" output="normal" display_field="name" delimiter="|" />');
 
-  
+    list['newsTopics'] = hasLegendary(topics) ? null : topics;
     list['title'] = processTags('<t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" />').replace(/&/gi,'&amp;');
     list['articleSubhead'] = processTags('<t4 type="content" name="Article Subhead" output="normal" modifiers="striptags,htmlentities" />').replace(/&/gi,'&amp;');
     list['newsTypes'] = processTags('<t4 type="content" name="News Types" output="normal" display_field="name" delimiter="|" />');
-    list['newsTopics'] = processTags('<t4 type="content" name="News Topics" output="normal" display_field="name" delimiter="|" />');
     list['author'] = processTags('<t4 type="content" name="Author" output="normal" modifiers="striptags,htmlentities" />').replace(/&/gi,'&amp;');
     list['schoolsColleges'] = processTags('<t4 type="content" name="Schools and Colleges" output="normal" display_field="name" delimiter="|" />');
     list['staffDepartment'] = processTags('<t4 type="content" name="Department" output="normal" display_field="value" delimiter="|" />');
