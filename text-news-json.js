@@ -1,4 +1,9 @@
 try {
+
+  // Persist across per-story snippets
+  window.__SU_NEWS_FEED_WROTE =
+    (typeof window.__SU_NEWS_FEED_WROTE === 'boolean') ? window.__SU_NEWS_FEED_WROTE : false;
+
   function processTags(t4Tag) {
     myContent = content || null;
     return String(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, myContent, language, isPreview, t4Tag));
@@ -12,7 +17,6 @@ try {
     return processTags(formatString);
   }
 
-  var __newsFeedWrote = (typeof __newsFeedWrote !== 'undefined') ? __newsFeedWrote : false;
   function hasLegendary(topics) {
     if (!topics) return false;
     return String(topics).split('|').some(function (t) {
