@@ -42,9 +42,9 @@ try {
   if (!hasLegendary(topics)) {
     list['newsTopics'] = topics;
     var jsonObj = new org.json.JSONObject(list);
-    if (__newsFeedWrote) { document.write(','); }
+    if (window.__SU_NEWS_FEED_WROTE) { document.write(','); }
     document.write(jsonObj.toString());
-    __newsFeedWrote = true;
+    window.__SU_NEWS_FEED_WROTE = true;
   }
 
 } catch (err) {
