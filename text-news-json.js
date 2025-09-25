@@ -1,10 +1,5 @@
 try {
 
-  // Persist across per-story snippets
-  var __GLOBAL__ = (typeof window !== 'undefined') ? window : this;
-  __GLOBAL__.__SU_NEWS_FEED_WROTE =
-    (typeof __GLOBAL__.__SU_NEWS_FEED_WROTE === 'boolean') ? __GLOBAL__.__SU_NEWS_FEED_WROTE : false;
-
   function processTags(t4Tag) {
     myContent = content || null;
     return String(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, myContent, language, isPreview, t4Tag));
@@ -18,6 +13,8 @@ try {
     return processTags(formatString);
   }
 
+  // survives across per-story executions, initializes only once
+  var __newsFeedWrote = (typeof __newsFeedWrote !== 'undefined') ? __newsFeedWrote : false;
   function hasLegendary(topics) {
     if (!topics) return false;
     return String(topics).split('|').some(function (t) {
@@ -43,11 +40,11 @@ try {
   if (!hasLegendary(topics)) {
     list['newsTopics'] = topics;
     var jsonObj = new org.json.JSONObject(list);
-    if (__GLOBAL__.__SU_NEWS_FEED_WROTE) { document.write(','); }
+    if (__newsFeedWrote) { document.write(','); }   // comma only between items
     document.write(jsonObj.toString());
-    __GLOBAL__.__SU_NEWS_FEED_WROTE = true;
+    __newsFeedWrote = true;
   }
 
 } catch (err) {
-  document.write(err);
+  // fail silently
 }
