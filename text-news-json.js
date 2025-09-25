@@ -1,8 +1,9 @@
 try {
 
   // Persist across per-story snippets
-  window.__SU_NEWS_FEED_WROTE =
-    (typeof window.__SU_NEWS_FEED_WROTE === 'boolean') ? window.__SU_NEWS_FEED_WROTE : false;
+  var __GLOBAL__ = (typeof window !== 'undefined') ? window : this;
+  __GLOBAL__.__SU_NEWS_FEED_WROTE =
+    (typeof __GLOBAL__.__SU_NEWS_FEED_WROTE === 'boolean') ? __GLOBAL__.__SU_NEWS_FEED_WROTE : false;
 
   function processTags(t4Tag) {
     myContent = content || null;
