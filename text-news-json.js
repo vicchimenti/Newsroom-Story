@@ -43,9 +43,9 @@ try {
   if (!hasLegendary(topics)) {
     list['newsTopics'] = topics;
     var jsonObj = new org.json.JSONObject(list);
-    if (window.__SU_NEWS_FEED_WROTE) { document.write(','); }
+    if (__GLOBAL__.__SU_NEWS_FEED_WROTE) { document.write(','); }
     document.write(jsonObj.toString());
-    window.__SU_NEWS_FEED_WROTE = true;
+    __GLOBAL__.__SU_NEWS_FEED_WROTE = true;
   }
 
 } catch (err) {
