@@ -12,13 +12,6 @@ try {
       return processTags(formatString);
     }
 
-    function hasLegendary(topics) {
-      if (!topics) return false;
-      return String(topics).split('|').some(function (t) {
-        return t.trim().toLowerCase() === 'legendary';
-      });
-    }
-
     var list = {};
     var topics = processTags('<t4 type="content" name="News Topics" output="normal" display_field="name" delimiter="|" />');
 
