@@ -33,7 +33,7 @@ try {
     list['image'] = processTags('<t4 type="content" name="Media Library Image" output="normal" formatter="v10/image/pxl-crop" cdn="true" pxl-filter-id="64" />');
     list['url'] = processTags('<t4 type="content" name="Title" output="fulltext" use-element="true" filename-element="Title" modifiers="striptags,htmlentities" />');
     
-    if (topic.toLowerCase().indexOf('legendary') === -1) {
+    if (topics.toLowerCase().indexOf('legendary') === -1) {
       list['newsTopics'] = topics;             
       var jsonObj = new org.json.JSONObject(list);
       document.write(jsonObj.toString() + ','); 
