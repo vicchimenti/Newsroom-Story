@@ -3,14 +3,6 @@ try {
       myContent = content || null;
       return String(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, myContent, language, isPreview, t4Tag));
     }
-  
-    function getLayout(contentLayout) {
-      var tid = content.getContentTypeID();
-      formatter = contentLayout;
-      format = publishCache.getTemplateFormatting(dbStatement, tid, formatter);
-      formatString = format.getFormatting();
-      return processTags(formatString);
-    }
 
     var list = {};
     var topics = processTags('<t4 type="content" name="News Topics" output="normal" display_field="name" delimiter="|" />');
