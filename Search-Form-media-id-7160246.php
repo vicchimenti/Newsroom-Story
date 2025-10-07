@@ -36,29 +36,8 @@ $i = 0;
           <select id="<?php echo $element; ?>" name="<?php echo $element; ?>" data-cookie="T4_persona">
             <option value="">All Topics</option>
             <?php foreach ($search as $item) : ?>
-              <?php
-                $raw = isset($item['value']) ? $item['value'] : '';
-
-                if (is_array($raw)) {
-                  $valueForAttr = implode('|', $raw);
-                  $label        = implode(', ', $raw);
-                  $skip = false;
-                  foreach ($raw as $t) {
-                    if (strcasecmp(trim($t), 'Legendary') === 0) { $skip = true; break; }
-                  }
-                } else {
-                  $valueForAttr = (string)$raw;
-                  $label        = (string)$raw;
-                  $skip = ($valueForAttr !== '' && preg_match('/(?:^|\|)\s*Legendary\s*(?:$|\|)/i', $valueForAttr));
-                }
-
-                if ($skip) continue;
-              ?>
-              <option value="<?php echo strtolower((string)$valueForAttr); ?>" <?php echo !empty($item['selected']) ? 'selected' : '' ?>>
-                <?php echo $label; ?>
-              </option>
+              <option value="<?php echo strtolower($item['value']); ?>" <?php echo $item['selected'] ? 'selected' : '' ?>><?php echo $item['value']; ?></option>
             <?php endforeach; ?>
-
           </select>
         <?php endif; ?>
       </div>
